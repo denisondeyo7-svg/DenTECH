@@ -315,13 +315,14 @@ nav a:hover{
 }
 
 .about{
+  border-top: 1px solid  #2b2c30;;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   max-width: 90%;
-  height: 100vh;
+
   width: 100%;
   margin: 15px;
   
@@ -397,6 +398,7 @@ nav a:hover{
   align-items: center;
   gap: 32px;
   width: 100%;
+  background: #0d0d0e;
 }
 
 .services-wrapper{
