@@ -5,13 +5,7 @@ function About(){
     const content = [
         {number:"1",mytitle:"Hear from me", contentTitle:"Who’s Denis ?", contentTheme:"The Developer Behind the Code" , mycontent:"I’m Denis Ondeyo, an aspiring software developer and IT professional with a passion for technology, creativity, and problem-solving. I’m currently pursuing a BSc in Information Technology at Kibabii University, while building practical experience through personal projects and continuous learning. I enjoy turning ideas into functional digital solutions through web development, programming. My goal is to keep growing as a developer, create technology that solves real-world problems, and build a career around innovation and meaningful digital solutions."},
         ];
-    const skills = [
-        {number:"01" , title:"Web development"},
-        {number:"02" , title:"React development"},
-        {number:"03" , title:"PHP & Mysql"},
-        {number:"04" , title:"Django development"},
-        {number:"05" , title:"UI & UX Design"}
-    ];
+    
 
     
     return(

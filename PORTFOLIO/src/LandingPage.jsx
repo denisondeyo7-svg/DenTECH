@@ -1,9 +1,9 @@
 function LandingPageContent(){
 
     const Content =[
-        {number:" 1" , developer:"Hello , i'm Denis Ondeyo"},
-        {number:" 2" , me:"Innovating Your digital Experience."},
-        {number:" 3" , work:" I specialize in bridging powerful back-end systems with dynamic front-end experiences, bringing modern web applications to life through clean, functional, and user-focused development."}
+        
+        {number:" 1" , me:"Innovating Your digital Experience."},
+        {number:" 2" , work:" I specialize in bridging powerful back-end systems with dynamic front-end experiences, bringing modern web applications to life through clean, functional, and user-focused development."}
         
     ];
 
