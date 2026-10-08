@@ -5,7 +5,7 @@ function Header(){
         <header>
             
             <div className="logo">
-                <img src={image} id='home' alt="" />
+                <img src={image} id='home' alt="logo" />
             </div>
             
 
@@ -13,9 +13,9 @@ function Header(){
                 <nav>
                     <a href="#home">Home</a>
                     <a href="#about">About</a>
-                    <a href="">Services</a>
+                    <a href="#services">Services</a>
                     <a href="">Project</a>
-                    <a href="">Contact</a>
+                    <a href="#contact">Contact</a>
                 </nav>
             </div>
 

@@ -8,7 +8,7 @@ function LandingPageContent(){
     ]; 
 
     return(
-        <section className="landingpage">
+        <section className="landingpage" id='home'>
             <div className="mybars">
                 <div className="bars"></div>
                 <div className="bars"></div>
@@ -20,6 +20,7 @@ function LandingPageContent(){
             </div>
 
             <div className="load"></div>
+            <br />
             <div className="heros">
                 <h1>Meet , Denis Ondeyo</h1>
                 {Content.map((Content)=>(

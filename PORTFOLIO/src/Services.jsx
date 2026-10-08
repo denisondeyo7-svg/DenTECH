@@ -24,7 +24,7 @@ function Myservices(){
     ]
 
     return(
-        <section className="Services">
+        <section className="Services"id='services'>
             {SectionTitle.map((SectionTitle)=>(
                 <div key={SectionTitle.number}>
                     <h1>{SectionTitle.Title}</h1>
