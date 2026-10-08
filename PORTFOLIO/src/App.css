@@ -1,5 +1,10 @@
 body{
   margin: 0;
+  background: #16171d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 header{
@@ -94,7 +99,94 @@ nav a:hover{
   height: 90vh;
   margin: 15px;
 }
+.mybars{
+  position: relative;
+  z-index: 50;
+  top: -6rem;
+  display: flex;
+  gap: 12px;
+  width: 90%;
+  height: 0;
+  left: 1rem;
+  pointer-events: none;
+  
+}
 
+.bars{
+  position: absolute;
+  height: 4rem;
+  width: 2px;
+  background: aqua;
+  box-shadow:  0 0 10px rgba(0, 255, 255, 0.459);
+  animation: fall 12s linear infinite;
+}
+.bars:nth-child(1){
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.bars:nth-child(2){
+  left: 30%;
+  animation-delay: 3s;
+}
+
+.bars:nth-child(3){
+  left: 55%;
+  animation-delay: 4s;
+}
+.bars:nth-child(4){
+  left: 75%;
+  animation-delay: 9s;
+}
+
+.bars:nth-child(5){
+  left: 90%;
+  animation-delay: 1.5s; 
+}
+.bars:nth-child(6){
+  left: 15%;
+  animation-delay: 2s; 
+}
+.bars:nth-child(7){
+  left: 27%;
+  animation-delay: 3s; 
+}
+
+@keyframes fall {
+  0% {
+      opacity: 0;
+      transform: translateY(0);
+  }
+  10% {
+      opacity: 1; 
+  }
+  50% {
+      opacity: 1;
+  }
+  90% {
+      opacity: 0.6;
+  }
+  100% {
+      transform: translateY(98vh); 
+      opacity: 0;
+  }
+}
+
+.load{
+  position: fixed;
+  top: 0;
+  background: aqua;
+  height: 3px;
+  width: 0;
+  left: 0;
+  animation: load 12s;
+  animation-timeline: scroll();
+}
+
+@keyframes load{
+  from{width: 0%;}
+  to{width: 100%;}
+}
 
 .heros{
   display: flex;
@@ -161,6 +253,17 @@ nav a:hover{
   
 }
 
+.socials-links{
+  display: flex;
+  gap: 26px;
+}
+
+.socials-links i{
+  font-size: 22px;
+  color: rgba(0, 255, 255, 0.836);
+
+}
+
 .tools-wrapper{
   display: flex;
   flex-direction: column;
@@ -187,36 +290,6 @@ nav a:hover{
   border: 1px solid rgba(0, 255, 255, 0.411);
   padding: 10px;
 
-}
-.stats{
-  padding: 12px;
-  display: flex;
-  align-items: center;
-  max-width: 80%;
-  width: 100%;
-}
-
-.stats-wrapper{
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  padding: 12px;
-  width: 100%;
-  background: #ffffff1c;
-  border-radius: 20px;
-  border: 1px solid rgba(0, 255, 255, 0.308);
-  
-}
-.statsbox{
-  padding: 10px;
-  display: flex;
-  gap: 12px;
-  flex-direction: column;
-  align-items: center;
-}
-
-.statsbox p{
-  color: rgba(0, 255, 255, 0.815);
 }
 
 .whatsapp{
@@ -335,6 +408,18 @@ nav a:hover{
   width: 100%;
 }
 
+.serviceimage{
+  max-width: 85%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.serviceimage img{
+  
+  width: 100%;
+  object-fit: cover;
+}
+
 .service-card-container{
   display: flex;
   align-items: center;
@@ -344,7 +429,7 @@ nav a:hover{
 
 .service-card{
   padding: 20px;
-  width: 20rem;
+  width: 23rem;
   height: 14rem ;
   background: #4b4b4d52;
   border-radius: 10px;
