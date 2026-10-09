@@ -164,8 +164,8 @@ nav a:hover{
   90% {
       opacity: 0.6;
   }
-  100% {
-      transform: translateY(98vh); 
+  95% {
+      transform: translateY(96vh); 
       opacity: 0;
   }
 }
@@ -621,6 +621,10 @@ footer{
 }
 
 @media (min-width:480px)and (max-width:768px) {
+  
+  header{
+    top: 1rem;
+  }
   .me{
     font-size: 40px;
     font-weight: 800;
