@@ -26,7 +26,7 @@ function LandingPageContent(){
                 {Content.map((Content)=>(
                     <div className="herosContent"key={Content.number}>
                         <h2>{Content.developer}</h2>
-                        <h1>{Content.me}</h1>
+                        <h1 className='me'>{Content.me}</h1>
                         <p>{Content.work}</p>
 
                     </div>  
@@ -42,7 +42,7 @@ function LandingPageContent(){
                     <button id="reachbtn">Reach out     <i className="fas fa-phone"></i></button>
                     
                 </div>
-                <br /><br />
+                <br /><br /><br />
 
                 <div className="socials-links">
                     <i className='fab fa-github'></i>

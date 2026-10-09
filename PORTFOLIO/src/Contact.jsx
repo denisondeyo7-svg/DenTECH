@@ -36,7 +36,7 @@ function Contact(){
                             <textarea name="message" id="message"required></textarea>
                             
                         </div>
-
+<br />
                         <button id="sendmessage">Send Message</button>
                     </form>
 

@@ -94,6 +94,8 @@ nav a:hover{
   width: 100%;
   
 }
+
+
 .mybars{
   position: relative;
   z-index: 50;
@@ -251,13 +253,21 @@ nav a:hover{
 
 .socials-links{
   display: flex;
-  gap: 26px;
+  gap: 33px;
 }
 
 .socials-links i{
-  font-size: 22px;
+  font-size: 26px;
   color: rgba(0, 255, 255, 0.836);
 
+}
+
+.socials-links i:hover{
+  padding: 2px;
+  font-size: 20px;
+  background: aqua;
+  color: #000;
+  border-radius: 5px;
 }
 
 .tools-wrapper{
@@ -606,11 +616,15 @@ footer{
 
 @media (min-width:1024px){
   footer{
-    top: 29rem;
+    top: 18rem;
   }
 }
 
 @media (min-width:480px)and (max-width:768px) {
+  .me{
+    font-size: 40px;
+    font-weight: 800;
+  }
   .links nav{
     display: none;
   }
@@ -663,7 +677,7 @@ footer{
     top: 8rem;
   }
   footer{
-    top: 29rem;
+    top: 25rem;
   }
 
 }
