@@ -20,11 +20,12 @@ function Myservices(){
         {number:"4", toolname:"React"},
         {number:"5", toolname:"PHP"},
         {number:"6", toolname:"DJANGO"},
-        {number:"1", toolname:"mySQL"}
+        {number:"7", toolname:"mySQL"}
     ]
 
     return(
         <section className="Services"id='services'>
+            <br />
             {SectionTitle.map((SectionTitle)=>(
                 <div key={SectionTitle.number}>
                     <h1>{SectionTitle.Title}</h1>
@@ -48,12 +49,12 @@ function Myservices(){
                     
                 </div>
                 <div className="tools-wrapper">
-                    <h2>My Toolkit</h2>
+                    <h1>Technical Toolkit</h1>
                     <div className="tools">
                         
                         {Tools.map((Tool)=>(
 
-                            <div className="tool"key={Tools.number}>
+                            <div className="tool"key={Tool.number}>
                                 <p>{Tool.toolname}</p>
                             </div>
                         ))}

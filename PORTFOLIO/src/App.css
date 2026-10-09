@@ -20,15 +20,18 @@ header{
   align-self: center;
   justify-content: space-between;
   padding: 10px;
-  border: 1px solid rgba(0, 255, 255, 0.336);
+  border: 1px solid rgba(0, 255, 255, 0.418);
   border-radius: 40px;
   box-shadow:  0 0 15px rgba(0, 255, 255, 0.356);
   background: #16171d;
   
 }
+
+
 nav{
   display: flex;
   gap:22px;
+  margin-right: 32px;
 }
 nav a{
   color: aqua;
@@ -39,29 +42,15 @@ nav a:hover{
 
   text-decoration: underline;
 }
-.socials{
-  display: flex;
-  gap: 22px;
-}
 
-.socials i{
-  font-size: 20px;
-  color: aqua;
-
-}
-.socials i:hover{
-  background: aqua;
-  color: #000;
-  border-radius: 5px;
-  padding: 2px;
-  
-}
 .logo{
+  margin-left: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   max-width: 22%;
   width: 100%;
+  height: auto;
   overflow: hidden;
 }
 
@@ -71,6 +60,7 @@ nav a:hover{
   object-fit: cover;
 }
 .menubtn{
+  display: none;
   margin-right: 22px;
   border: 1px solid rgba(0, 255, 255, 0.199);
   padding: 10px;
@@ -95,12 +85,14 @@ nav a:hover{
 }
 
 .landingpage{
+ 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  margin: 15px;
+  height: 92vh;
+  width: 100%;
+  
 }
 .mybars{
   position: relative;
@@ -178,6 +170,7 @@ nav a:hover{
 
 .load{
   position: fixed;
+  z-index: 1000;
   top: 0;
   background: aqua;
   height: 3px;
@@ -199,7 +192,8 @@ nav a:hover{
   justify-content: center;
   margin: 15px;
   position: relative;
-  
+  top: 3rem;
+  max-width: 90%;
   width: 100%;
   
   
@@ -223,13 +217,12 @@ nav a:hover{
 
 #workbtn{
   padding: 18px;
-  border: none;
+  border: 1px solid aqua;
   width: 12rem;
   border-radius: 40px;
-  background: aqua;
+  background: rgba(0, 255, 255, 0.185);
   font-size: 20px;
-  color: #000;
-  
+  color: aqua;
   transition: .3s ease-in;
 }
 
@@ -245,15 +238,14 @@ nav a:hover{
   width: 12rem;
   border-radius: 40px;
   font-size: 20px;
-  border: none;
-  background: #fff;
-  color: #000;
+  border: 1px solid #fff;
+  background: #ffffff2c;
+  color: #fff;
+  transition: .3s ease;
 }
 #reachbtn:hover{
-  background: aqua;
-  color: #000;
-  border: none;
-  
+  background: transparent;
+  color: #fff; 
   
 }
 
@@ -295,7 +287,6 @@ nav a:hover{
   padding: 10px;
 
 }
-
 .whatsapp{
   display: flex;
   align-items: center;
@@ -354,8 +345,12 @@ nav a:hover{
   height: 100%;
   width: 100%;
   object-fit: cover;
+  transition: .3s ease;
 }
 
+.aboutimage img:hover{
+ scale: 1.06;
+}
 .about-content{
   display: flex;
   align-items: center;
@@ -393,6 +388,22 @@ nav a:hover{
   border-radius: 40px;
   color: aqua;
   font-size: 18px;
+}
+
+.why{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  width: 100%;
+}
+
+.whycontainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90%;
+  width: 100%;
 }
 
 .Services{
@@ -435,14 +446,17 @@ nav a:hover{
 
 .service-card{
   padding: 20px;
+  border: 1px solid rgba(0, 255, 255, 0.13);
   width: 23rem;
   height: 14rem ;
   background: #4b4b4d52;
   border-radius: 10px;
+  transition: .6s ease;
 }
 
 .service-card:hover{
-  background: rgba(0, 255, 255, 0.342);
+  background: rgba(0, 255, 255, 0.041);
+  border: 1px solid rgba(0, 255, 255, 0.527);
   
 }
 .service-card h1{
@@ -509,10 +523,7 @@ form{
   flex-direction: column;
   gap: 12px;
 }
-form p{
-  padding: 10px;
-  border-radius: 40px;
-  color:  rgb(0, 255, 255);
+form h1{
   text-align: center;
 }
 .input{
@@ -565,21 +576,37 @@ footer{
 
 .mainfooter{
   display: flex;
+  gap: 32px;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 10px;
+  padding: 20px;
 }
 
+.FooterSocials{
+  display: flex;
+  gap: 22px;
+}
+
+.FooterSocials i{
+  font-size: 20px;
+  
+
+}
 .mainfooter nav{
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 12px;
+}
+
+.subfooter{
+  border-top: 1px solid #16171d;
+  padding: 22px;
 }
 
 @media (min-width:1024px){
   footer{
-    top: 32rem;
+    top: 29rem;
   }
 }
 
@@ -587,7 +614,10 @@ footer{
   .links nav{
     display: none;
   }
-  
+  .menubtn{
+    display: block;
+   
+  }
   .about-wrapper{
     display: flex;
     width: 100%;
@@ -618,11 +648,11 @@ footer{
     
   }
   .about{
-    top: 8rem;
+    top: 3rem;
   }
   .Services{
   
-    top: 15rem;
+    top: 4rem;
   }
   .services-wrapper{
     position: relative;
@@ -630,10 +660,10 @@ footer{
   }
   .Contactsection{
     position: relative;
-    top: 14rem;
+    top: 8rem;
   }
   footer{
-    top: 40rem;
+    top: 29rem;
   }
 
 }

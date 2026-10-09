@@ -20,7 +20,7 @@ function Contact(){
                 </div>
                 <div className="form">
                     <form action="" method="post">
-                        <p>Drop Your Message Here</p>
+                        <h1>Send Request</h1>
                         <div className="input">
                             <label htmlFor="firstname">Firstname</label>
                             <input type="text" name="firstname" required/>

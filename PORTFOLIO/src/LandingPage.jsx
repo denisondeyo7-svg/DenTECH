@@ -8,7 +8,7 @@ function LandingPageContent(){
     ]; 
 
     return(
-        <section className="landingpage" id='home'>
+        <section className="landingpage"id="home">
             <div className="mybars">
                 <div className="bars"></div>
                 <div className="bars"></div>

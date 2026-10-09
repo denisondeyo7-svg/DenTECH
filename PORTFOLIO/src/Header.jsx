@@ -5,13 +5,13 @@ function Header(){
         <header>
             
             <div className="logo">
-                <img src={image} id='home' alt="logo" />
+                <img src={image} alt="logo" />
             </div>
             
 
             <div className="links">
                 <nav>
-                    <a href="#home">Home</a>
+                    <a href="#home"><i className='fa-regular fa-house'></i>         Home</a>
                     <a href="#about">About</a>
                     <a href="#services">Services</a>
                     <a href="">Project</a>
@@ -19,14 +19,7 @@ function Header(){
                 </nav>
             </div>
 
-            <div className="socials">
-                <i className='fab fa-linkedin'></i>
-                <i className='fab fa-whatsapp'></i>
-                <i className='fab fa-facebook'></i>
-                <i className='fab fa-twitter'></i>
-                <i className='fas fa-phone'></i>
-            </div>
-
+            
             <div className="menubtn">
                 <div className="sticks">
                     <div className="stick"></div>

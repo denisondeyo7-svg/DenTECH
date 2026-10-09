@@ -10,7 +10,7 @@ function App() {
     <>
       <Header/>
       <LandingPageContent/>
-      <br /><br />
+      <br />
       <About/>
       <br /><br /><br /><br />
       <Myservices/>
