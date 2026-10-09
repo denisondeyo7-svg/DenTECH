@@ -305,13 +305,13 @@ nav a:hover{
   background: #1a3e;
   border-radius: 50%;
   padding: 12px;
-  height: 4.4rem;
-  width: 4.4rem;
+  height: 3rem;
+  width: 3rem;
 }
 
 
 .whatsapp i{
-  font-size: 65px;
+  font-size: 50px;
   color: #fff;
   
 }
