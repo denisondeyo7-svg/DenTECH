@@ -610,7 +610,71 @@ footer{
   border-top: 1px solid #16171d;
   padding: 22px;
 }
+@media screen and (max-width: 480px) {
+  header{
+    top: 1rem;
+  }
+  .me{
+    font-size: 45px;
+   
+    
+  }
+  .links nav{
+    display: none;
+  }
+  .menubtn{
+    display: block;
+   
+  }
+  .about-wrapper{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .aboutimage{
+    height:24rem;
+    width: 24rem;
+    border-radius: 50%;
 
+  }  
+  .about-content{
+    display: flex;
+    align-items: center;
+    width: 90%;
+  }
+  .mytitle{
+    display: flex;
+    justify-self: center;
+    
+   
+  }
+  .service-card{
+   
+    width: 100%;
+    
+  }
+  .about{
+    top: 3rem;
+  }
+  .Services{
+  
+    top: 4rem;
+  }
+  .services-wrapper{
+    position: relative;
+    top: 1rem;
+  }
+  .Contactsection{
+    position: relative;
+    top: 8rem;
+  }
+  footer{
+    top: 25rem;
+  }
+
+}
 @media (min-width:1024px){
   footer{
     top: 20rem;
