@@ -112,7 +112,7 @@ nav a:hover{
 
 .mybars{
 
-  position: relative;
+  position: absolute;
 
   z-index: 50;
 
@@ -128,7 +128,7 @@ nav a:hover{
 
   pointer-events: none;
 
-  overflow: hidden;
+ 
 
 }
 
