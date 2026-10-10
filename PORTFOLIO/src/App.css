@@ -7,6 +7,7 @@ body{
   width: 100%;
 
 }
+
 h1,h2,p{
   color: rgb(217, 218, 219);
 }
@@ -93,7 +94,57 @@ nav a:hover{
   height: 2px;
 
 }
+.sidebar {
+  display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    background: #16171d;
+    padding: 25px;
+    z-index: 1000;
+    box-shadow: -5px 0 20px rgba(0, 255, 255, 0.15);
+}
 
+.sidebar button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  background: transparent;
+  color: aqua;
+  border: 1px solid #ffffff2c;
+  border-radius: 10px;
+  font-size: 25px;
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+}
+
+.sidebar button:hover{
+    border: 1px solid aqua;
+    border-radius: 5px;
+    
+    
+    
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.sidebar nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar nav a:hover {
+    color: aqua;
+}
 .landingpage{
 
   display: flex;
@@ -731,6 +782,79 @@ nav a:hover{
   line-height: 110%;
 
 }
+.Projects{
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ gap: 22px;
+  width: 100%;
+}
+
+.proj-container{
+  position: relative;
+  top:5rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 29px;
+  width: 100%;
+}
+.projects-wrapper{
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 90%;
+}
+
+.projectCard{
+  padding: 12px;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  gap: 12px;
+  
+  border-radius: 3px;
+  width: 23rem;
+
+}
+.name{
+  text-align: center;
+}
+.image{
+  height: 25rem;
+  width: 100%;
+  border: 1px solid rgba(0, 255, 255, 0.356);
+  overflow: hidden;
+}
+
+.image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.projectCard .btn button{
+  width: 100%;
+  padding: 10px;
+  background: rgba(0, 255, 255, 0.075);
+  border: 1px solid aqua;
+  color: aqua;
+
+}
+
+
+
+
+
+
+
+
+
 
 .Contactsection{
 
@@ -974,6 +1098,10 @@ footer{
     top: 1rem;
 
   }
+  .projects-wrapper{
+    display: flex;
+    flex-direction: column;
+  }
 
   .me{
 
@@ -993,6 +1121,11 @@ footer{
 
   }
 
+  .sidebar{
+
+    display: block;
+
+  }
   .about-wrapper{
 
     display: flex;
@@ -1093,7 +1226,18 @@ footer{
     top: 1rem;
 
   }
+  .projects-wrapper{
+    display: flex;
+    flex-direction: column;
+  }
 
+  
+
+  .sidebar{
+
+    display: block;
+
+  }
   .me{
 
     font-size: 45px;
@@ -1525,7 +1669,9 @@ footer {
     padding: 8px 10px;
   }
   
-
+  .projectCard{
+    width: 100%;
+  }
   .logo {
     margin-left: 4px;
     max-width: 48%;
@@ -1658,6 +1804,14 @@ footer {
     flex: 1 1 auto;
     width: 100%;
   }
+  .sidebar{
+
+    display: block;
+
+  }
+  .projectCard{
+    width: 100%;
+  }
   .herosContent h1 {
     font-size: clamp(1.8rem, 8.5vw, 2.7rem);
     -webkit-text-stroke-width: 0.8px;
@@ -1721,6 +1875,14 @@ footer {
   header {
     width: calc(100% - 16px);
     padding: 7px 8px;
+  }
+  .projectCard{
+    width: 100%;
+  }
+  .sidebar{
+
+    display: block;
+
   }
   .myname{
     font-size: 22px;
