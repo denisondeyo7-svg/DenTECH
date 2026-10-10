@@ -5,11 +5,13 @@ body{
   flex-direction: column;
   align-items: center;
   width: 100%;
+
 }
 
 html{
   scroll-behavior: smooth;
 }
+
 header{
   position: fixed;
   z-index: 1000;
@@ -24,23 +26,24 @@ header{
   border-radius: 40px;
   box-shadow:  0 0 15px rgba(0, 255, 255, 0.356);
   background: #16171d;
-  
 }
-
 
 nav{
   display: flex;
   gap:22px;
   margin-right: 32px;
+
 }
+
 nav a{
   color: aqua;
   text-decoration: none;
+
 }
 
 nav a:hover{
-
   text-decoration: underline;
+
 }
 
 .logo{
@@ -58,692 +61,1710 @@ nav a:hover{
   width: 100%;
   height: 100%;
   object-fit: cover;
+
 }
+
 .menubtn{
   display: none;
   margin-right: 22px;
   border: 1px solid rgba(0, 255, 255, 0.199);
   padding: 10px;
   border-radius: 8px;
+
 }
 
 .menubtn:hover{
-
   border: 1px solid rgba(0, 255, 255, 0.979);
-  
+
 }
+
 .sticks{
   display: flex;
   flex-direction: column;
   gap: 7px;
+
 }
 
 .stick{
   background: aqua;
   width: 30px;
   height: 2px;
+
 }
 
 .landingpage{
- 
+
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
+
   justify-content: center;
+
   height: 92vh;
+
   width: 100%;
-  
+
 }
 
-
 .mybars{
+
   position: relative;
+
   z-index: 50;
+
   top: -3rem;
+
   gap: 12px;
+
   width: 100%;
+
   height: 0;
+
   left: 1rem;
+
   pointer-events: none;
+
   overflow: hidden;
-  
+
 }
 
 .bars{
+
   position: absolute;
+
   height: 4rem;
+
   width: 2px;
-  background: aqua;
+
+  background: rgba(0, 255, 255, 0.774);
+
   box-shadow:  0 0 10px rgba(0, 255, 255, 0.459);
+
   animation: fall 12s linear infinite;
+
   opacity: 0;
+
 }
+
 .bars:nth-child(1){
+
   left: 10%;
+
   animation-delay: 0s;
+
 }
 
 .bars:nth-child(2){
+
   left: 30%;
+
   animation-delay: 3s;
+
 }
 
 .bars:nth-child(3){
+
   left: 55%;
+
   animation-delay: 4s;
+
 }
+
 .bars:nth-child(4){
+
   left: 75%;
+
   animation-delay: 9s;
+
 }
 
 .bars:nth-child(5){
+
   left: 90%;
-  animation-delay: 1.5s; 
+
+  animation-delay: 1.5s;
+
 }
+
 .bars:nth-child(6){
+
   left: 45%;
-  animation-delay: 2s; 
+
+  animation-delay: 2s;
+
 }
+
 .bars:nth-child(7){
+
   left: 20%;
-  animation-delay: 6s; 
+
+  animation-delay: 6s;
+
 }
 
 @keyframes fall {
+
   0% {
+
       opacity: 0;
+
       transform: translateY(0);
+
   }
+
   10% {
-      opacity: 1; 
+
+      opacity: 1;
+
   }
+
   90% {
+
       opacity: 0.6;
+
       transform: translateY(88vh);
+
   }
+
   95% {
-      transform: translateY(96vh); 
+
+      transform: translateY(96vh);
+
       opacity: 0;
+
   }
+
 }
 
 .load{
+
   position: fixed;
+
   z-index: 1000;
+
   top: 0;
+
   background: aqua;
+
   height: 3px;
+
   width: 0;
+
   left: 0;
+
   animation: load 12s;
+
   animation-timeline: scroll();
+
 }
 
 @keyframes load{
+
   from{width: 0%;}
+
   to{width: 100%;}
+
 }
 
 .heros{
+
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
+
   justify-content: center;
+
   margin: 15px;
+
   position: relative;
-  top: 3rem;
+
   max-width: 90%;
+
   width: 100%;
-  
-  
-  
+
 }
 
 .herosContent h1{
+
   text-align: center;
+
   color: transparent;
+
   -webkit-text-stroke: 1px aqua;
+
   line-height:118%;
+
 }
+
 .herosContent p{
+
   text-align: center;
-  
+
 }
+
 .c2a{
+
   display: flex;
+
   gap: 42px;
+
 }
 
 #workbtn{
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
   padding: 18px;
+
   border: 1px solid aqua;
+
   width: 14rem;
+
   border-radius: 40px;
+
   background: rgba(0, 255, 255, 0.185);
+
   font-size: 20px;
+
   color: aqua;
+
   transition: .3s ease-in;
+
 }
 
 #workbtn:hover{
+  
   background: transparent;
+
   color: aqua;
+
   border: 1px solid aqua;
-  
-  
+
 }
+
 #reachbtn{
-  padding: 18px;
-  width: 14rem;
-  border-radius: 40px;
-  font-size: 20px;
-  border: 1px solid #fff;
-  background: #ffffff2c;
-  color: #fff;
-  transition: .3s ease;
-}
-#reachbtn:hover{
-  background: transparent;
-  color: #fff; 
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
   
+  padding: 18px;
+
+  width: 14rem;
+
+  border-radius: 40px;
+
+  font-size: 20px;
+
+  border: 1px solid #fff;
+
+  background: #ffffff2c;
+
+  color: #fff;
+
+  transition: .3s ease;
+
+}
+
+#reachbtn:hover{
+
+  background: transparent;
+
+  color: #fff;
+
 }
 
 .socials-links{
+
   display: flex;
-  gap: 33px;
+
+  gap: 25px;
+
 }
 
 .socials-links i{
+
   padding: 3px;
-  font-size: 26px;
+
+  font-size: 22px;
+
   color: #000;
+
   background: rgba(0, 255, 255, 0.651);
+
   border-radius: 5px;
 
 }
 
 .socials-links i:hover{
+
   box-shadow:  0 0 10px rgba(0, 255, 255, 0.432);
+
 }
 
 .tools-wrapper{
+
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
+
   gap: 12px;
+
   padding: 14px;
+
   width: 100%;
+
 }
+
 .tools{
+
   display: flex;
+
   align-items: center;
+
   flex-wrap: wrap;
+
   gap: 12px;
+
   padding: 14px;
 
 }
 
 .tool{
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
+
   background: rgba(0, 255, 255, 0.164);
+
   border-radius: 5px;
+
   border: 1px solid rgba(0, 255, 255, 0.411);
+
   padding: 10px;
 
 }
+
 .whatsapp{
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
+
   position: fixed;
+
   z-index: 1000;
+
   right: 35px;
+
   bottom: 55px;
+
   background: #1a3e;
+
   border-radius: 50%;
+
   padding: 12px;
-  height: 3rem;
-  width: 3rem;
+
+  height: 3.5rem;
+
+  width: 3.5rem;
+
 }
 
-
 .whatsapp i{
-  font-size: 50px;
+
+  font-size: 40px;
+
   color: #fff;
-  
+
 }
 
 .about{
+
   border-top: 1px solid  #2b2c30;;
+
   position: relative;
+
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
+  justify-self: center;
   justify-content: center;
-  max-width: 90%;
+
+  max-width: 98%;
 
   width: 100%;
-  margin: 15px;
   
+  margin: 15px;
+
 }
 
 .about-wrapper{
-  width: 100%;
-  display: flex;
-  gap: 42px;
-  align-items: center;
-  justify-content: center;
-}
 
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 42px;
+  height: 100%;
+  align-items: center;
+
+  justify-content: center;
+
+}
 
 .aboutimage{
   height:90%;
+
   width: 27rem;
+
   border-radius: 25px;
+
   background: rgba(0, 255, 255, 0.308);
+
   overflow: hidden;
 
 }
 
 .aboutimage img{
+
   height: 100%;
+
   width: 100%;
+
   object-fit: cover;
+
   transition: .3s ease;
+
 }
 
 .aboutimage img:hover{
- scale: 1.06;
+
+ transform: scale(1.06);
+
 }
+
 .about-content{
+
   display: flex;
+
   align-items: center;
-  width: 70%;
+
+  width: 90%;
+
   gap: 12px;
 
 }
 
+.about-card{
+  padding: 10px;
+  
+}
 .about-card h1{
+
   line-height: 100%;
+
 }
 
 .mytitle{
+
   display: flex;
+
   gap: 12px;
+
   align-items: center;
+
   justify-content: center;
+
   padding: 10px;
+
   border:1px solid aqua;
-  width: 9rem;
+
+  width: 11rem;
+
   border-radius: 40px;
+
   color: aliceblue;
+
   background: rgba(0, 255, 255, 0.212);
+
 }
 
 #aboutbtn{
+
   display: flex;
+
   gap: 12px;
+
   align-items: center;
+
   justify-content: center;
+
   padding: 12px;
+
   border: 1px solid aqua;
+
   background: rgba(0, 238, 255, 0.144);
+
   width: 100%;
+
   border-radius: 40px;
+
   color: aqua;
+
   font-size: 18px;
+
 }
 
-.why{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 22px;
-  width: 100%;
-}
-
-.whycontainer{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 90%;
-  width: 100%;
-}
 
 .Services{
+
   position: relative;
+
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
+
   gap: 32px;
+
   width: 100%;
+
   background: #0d0d0e;
+
 }
 
 .services-wrapper{
+
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
+
   gap: 22px;
+
   max-width: 95%;
+
   width: 100%;
+
 }
 
 .serviceimage{
+
   max-width: 85%;
+
   width: 100%;
+
   overflow: hidden;
+
 }
 
 .serviceimage img{
-  
+
   width: 100%;
+
   object-fit: cover;
+
 }
 
 .service-card-container{
+
   display: flex;
+
   align-items: center;
+
   flex-wrap: wrap;
+
   gap: 22px;
+
 }
 
 .service-card{
+
   padding: 20px;
+
   border: 1px solid rgba(0, 255, 255, 0.13);
+
   width: 23rem;
+
   height: 14rem ;
+
   background: #4b4b4d52;
+
   border-radius: 10px;
+
   transition: .6s ease;
+
 }
 
 .service-card:hover{
+
   background: rgba(0, 255, 255, 0.041);
+
   border: 1px solid rgba(0, 255, 255, 0.527);
-  
+
 }
+
 .service-card h1{
+
   line-height: 110%;
+
 }
 
 .Contactsection{
+
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
+
   width: 100%;
+
   height: 100vh;
+
 }
 
 .contact-wrapper{
+
   display: flex;
+
   flex-direction: column;
+
   margin: 15px;
+
   gap: 22px;
+
 }
 
 .contact-wrapper h1{
+
  line-height: 100%;
+
 }
 
 .contact-container{
+
   display: flex;
+
   gap: 22px;
+
   align-items: center;
+
   width: 100%;
+
   flex-wrap: wrap;
+
 }
 
 .contact-container p{
-  
-  width: 50% auto;
+
+  width: auto;
 
 }
 
 .contactdetails{
+
   display: flex;
+
   align-items: center;
+
   flex-direction: column;
-  
+
 }
 
 .contactdetails ul {
+
   display: flex;
+
   flex-direction: column;
+
   gap: 12px;
+
   width: 100%;
+
 }
+
 .contactdetails ul li{
+
   list-style: none;
+
   padding: 10px;
+
   background: #32323331;
+
   border-radius: 10px;
+
   width: 100%;
 
 }
 
 form{
+
   display: flex;
+
   flex-direction: column;
+
   gap: 12px;
+
 }
+
 form h1{
+
   text-align: center;
+
 }
+
 .input{
+
   display: flex;
+
   flex-direction: column;
+
   gap: 12px;
+
 }
 
 input{
+
   padding: 14px;
+
   outline: none;
+
   border-radius: 7px;
+
   border: 1px solid #5c5d5e31;
+
 }
 
 #message{
+
   padding: 10px;
+
   height: 6rem;
+
   border: none;
+
   border-radius: 10px;
+
   outline: none;
+
 }
+
 .input input:focus{
+
   border: 1px solid aqua;
+
 }
 
 .input #message:focus{
+
   border: 1px solid aqua;
+
 }
 
 #sendmessage{
+
   border: none;
+
   padding: 10px;
+
   background: aqua;
+
   color: #000;
+
   font-size: 16px;
+
 }
 
-
 footer{
+
   width: 100%;
+
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
+
   height: auto;
+
   position: relative;
+
   top: 26rem;
+
   background: #000;
+
 }
 
 .mainfooter{
+
   display: flex;
+
   gap: 32px;
+
   align-items: center;
+
   justify-content: center;
+
   flex-direction: column;
+
   padding: 20px;
+
 }
 
 .FooterSocials{
+
   display: flex;
+
   gap: 22px;
+
 }
 
 .FooterSocials i{
+
   font-size: 20px;
-  
 
 }
+
 .mainfooter nav{
+
   display: flex;
+
   flex-direction: column;
+
   gap: 12px;
+
 }
 
 .subfooter{
+
   border-top: 1px solid #16171d;
+
   padding: 22px;
+
 }
+
 @media screen and (max-width: 480px) {
+
   header{
+
     top: 1rem;
+
   }
+
   .me{
+
     font-size: 45px;
-   
-    
+
   }
+
   .links nav{
+
     display: none;
+
   }
+
   .menubtn{
+
     display: block;
-   
+
   }
+
   .about-wrapper{
+
     display: flex;
+
     width: 100%;
+
     flex-direction: column;
+
     align-items: center;
+
     justify-content: center;
+
   }
+
   .aboutimage{
+
     height:24rem;
+
     width: 24rem;
+
     border-radius: 50%;
 
   }  
+
   .about-content{
+
     display: flex;
+
     align-items: center;
+
     width: 90%;
+
   }
+
   .mytitle{
+
     display: flex;
     justify-self: center;
-    
-   
+
   }
+
   .service-card{
-   
+
     width: 100%;
-    
+
   }
+
   .about{
+
     top: 3rem;
+
   }
+
   .Services{
-  
+
     top: 4rem;
+
   }
+
   .services-wrapper{
+
     position: relative;
+
     top: 1rem;
+
   }
+
   .Contactsection{
+
     position: relative;
+
     top: 8rem;
+
   }
+
   footer{
+
     top: 25rem;
+
   }
 
 }
+
 @media (min-width:1024px){
+
   footer{
+
     top: 20rem;
+
   }
+
 }
 
 @media (min-width:480px)and (max-width:768px) {
-  
+
   header{
+
     top: 1rem;
+
   }
+
   .me{
+
     font-size: 45px;
-   
-    
+
   }
+
   .links nav{
+
     display: none;
+
   }
+
   .menubtn{
+
     display: block;
-   
+
   }
+
   .about-wrapper{
+
     display: flex;
+
     width: 100%;
+
     flex-direction: column;
+
     align-items: center;
+
     justify-content: center;
+
   }
-  .aboutimage{
-    height:24rem;
-    width: 24rem;
+
+  .aboutimage {
+
+    width: min(80vw, 24rem);
+
+    height: auto;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
     border-radius: 50%;
 
-  }  
+}
+
   .about-content{
+
     display: flex;
+
     align-items: center;
+
     width: 90%;
-  }
-  .mytitle{
-    display: flex;
-    justify-self: center;
-    
-   
-  }
-  .service-card{
-   
-    width: 100%;
-    
-  }
-  .about{
-    top: 3rem;
-  }
-  .Services{
-  
-    top: 4rem;
-  }
-  .services-wrapper{
-    position: relative;
-    top: 1rem;
-  }
-  .Contactsection{
-    position: relative;
-    top: 8rem;
-  }
-  footer{
-    top: 25rem;
+
   }
 
+  .mytitle{
+
+    display: flex;
+
+    justify-self: center;
+
+  }
+
+  .service-card{
+
+    width: 100%;
+
+  }
+
+  .about{
+
+    top: 3rem;
+
+  }
+
+  .Services{
+
+    top: 4rem;
+
+  }
+
+  .services-wrapper{
+
+    position: relative;
+
+    top: 1rem;
+
+  }
+
+  .Contactsection{
+
+    position: relative;
+
+    top: 8rem;
+
+  }
+
+  footer{
+
+    top: 25rem;
+
+  }
+
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+img,
+video,
+svg,
+canvas {
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  max-width: 100%;
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+li {
+  overflow-wrap: anywhere;
+}
+
+header {
+  width: calc(100% - 32px);
+  max-width: 1200px;
+  min-width: 0;
+}
+
+.logo {
+  min-width: 0;
+  max-width: 32%;
+}
+
+.logo img {
+  display: block;
+  height: auto;
+  max-height: 64px;
+}
+
+.landingpage {
+  min-height: 92vh;
+  height: auto;
+  padding: 8rem 16px 3rem;
+}
+
+.heros {
+  width: 100%;
+  max-width: 900px;
+  margin-inline: auto;
+  padding-inline: 8px;
+}
+
+.herosContent {
+  max-width: 100%;
+}
+
+.herosContent h1 {
+  font-size: clamp(2rem, 5vw, 4.5rem);
+}
+
+.herosContent p {
+  max-width: 720px;
+}
+
+.c2a {
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+#workbtn,
+#reachbtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(14rem, 100%);
+ height:3rem;
+  max-width: 100%;
+  
+}
+
+
+.tools-wrapper,
+.tools,
+.about,
+.about-wrapper,
+.about-content,
+.why,
+.whycontainer,
+.Services,
+.services-wrapper,
+.service-card-container,
+.Contactsection,
+.contact-wrapper,
+.contact-container,
+.contactdetails,
+form,
+.mainfooter {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.tools {
+  justify-content: center;
+}
+
+.whatsapp {
+  right: max(16px, env(safe-area-inset-right));
+  bottom: max(18px, env(safe-area-inset-bottom));
+}
+
+.about {
+  top: auto;
+  margin: 28px 0;
+  padding: 32px 0;
+}
+
+.about-wrapper {
+  gap: 28px;
+  margin: 12px;
+ 
+}
+
+.aboutimage {
+  flex: 0 1 27rem;
+  width: min(100%, 27rem);
+  height: auto;
+  aspect-ratio: 1 / 1;
+}
+
+.aboutimage img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.about-content {
+
+  flex: 1 1 320px;
+  width: auto;
+  min-width: 0;
+}
+
+.Services {
+  top: auto;
+  padding: 48px 16px;
+}
+
+.services-wrapper {
+  top: auto;
+  gap: 24px;
+}
+
+.serviceimage {
+  width: 100%;
+  max-width: 900px;
+}
+
+.serviceimage img {
+  display: block;
+  height: auto;
+}
+
+.service-card-container {
+  width: 100%;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.service-card {
+  flex: 1 1 280px;
+  width: auto;
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+  min-height: 14rem;
+}
+
+.Contactsection {
+  height: auto;
+  min-height: 0;
+  position: relative;
+  top: auto;
+  padding: 48px 16px;
+}
+
+.contact-wrapper {
+  width: min(100%, 1000px);
+  margin: 0 auto;
+}
+
+.contact-container {
+  align-items: flex-start;
+}
+
+.contact-container > * {
+  flex: 1 1 280px;
+  min-width: 0;
+}
+
+.contact-container p {
+  width: auto;
+  max-width: 100%;
+}
+
+.contactdetails ul {
+  margin: 0;
+  padding: 0;
+}
+
+.contactdetails ul li {
+  width: 100%;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+form {
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  min-width: 0;
+}
+
+input,
+textarea,
+#message {
+  width: 100%;
+  min-width: 0;
+}
+
+#message {
+  resize: vertical;
+}
+
+#sendmessage {
+  width: 100%;
+  cursor: pointer;
+}
+
+footer {
+  position: relative;
+  top: auto;
+  margin-top: 0;
+  height: auto;
+}
+
+.mainfooter {
+  width: 100%;
+}
+
+.subfooter {
+  width: 100%;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+
+@media screen and (max-width: 900px) {
+  nav {
+    gap: 14px;
+    margin-right: 12px;
+  }
+
+  .about-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .aboutimage {
+    flex: 0 1 auto;
+    width: min(80vw, 24rem);
+  }
+
+  .about-content {
+    width: 90%;
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+
+  .mytitle {
+    align-self: center;
+    justify-self: center;
+  }
+
+  .service-card {
+    flex-basis: 260px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  header {
+    top: 12px;
+    width: calc(100% - 24px);
+    padding: 8px 10px;
+  }
+  
+
+  .logo {
+    margin-left: 4px;
+    max-width: 48%;
+    width: auto;
+  }
+
+  .logo img {
+    max-width: 160px;
+  }
+
+  .links nav {
+    display: none;
+  }
+
+  .menubtn {
+    display: block;
+    margin-right: 4px;
+    flex-shrink: 0;
+  }
+
+  .landingpage {
+    padding-top: 7rem;
+  }
+
+  .heros {
+    top: 0;
+    max-width: 100%;
+  }
+
+  .herosContent h1 {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+  }
+
+  .c2a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+  }
+
+  #workbtn,
+  #reachbtn {
+
+    width: 100%;
+    height:2.9rem;
+
+    font-size: 1rem;
+  }
+
+  .about {
+    max-width: calc(100% - 24px);
+    width: 100%;
+    margin: 24px 0;
+    padding: 28px 0;
+  }
+
+  .about-wrapper {
+    width: 100%;
+    gap: 24px;
+  }
+
+  .aboutimage {
+    width: min(80vw, 22rem);
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+  }
+
+  .about-content {
+    width: 90%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .mytitle {
+    align-self: center;
+    justify-self: center;
+  }
+
+  .Services {
+    padding: 36px 12px;
+  }
+
+  .services-wrapper {
+    max-width: 100%;
+  }
+
+  .service-card-container {
+    gap: 14px;
+  }
+
+  .service-card {
+    flex: 1 1 100%;
+    width: 100%;
+    min-height: 0;
+    padding: 18px;
+  }
+
+  .Contactsection {
+    padding: 36px 12px;
+  }
+
+  .contact-container {
+    gap: 20px;
+  }
+
+  .mainfooter nav {
+    margin-right: 0;
+  }
+
+  footer {
+    top: auto;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .me {
+    font-size: clamp(1.8rem, 9vw, 2.8rem);
+  }
+
+  .c2a {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #workbtn,
+  #reachbtn {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+  .herosContent h1 {
+    font-size: clamp(1.8rem, 8.5vw, 2.7rem);
+    -webkit-text-stroke-width: 0.8px;
+  }
+
+  .herosContent p {
+    font-size: 0.95rem;
+  }
+
+  .tools-wrapper {
+    padding: 10px 8px;
+  }
+
+  .tools {
+    padding: 8px 4px;
+    gap: 8px;
+  }
+
+  .tool {
+    padding: 8px;
+  }
+
+  .whatsapp {
+    width: 3rem;
+    height: 3rem;
+    padding: 8px;
+  }
+
+  .whatsapp i {
+    font-size: 2rem;
+  }
+
+  .aboutimage {
+    width: min(78vw, 18rem);
+  }
+
+  .about-card h1,
+  .contact-wrapper h1 {
+    font-size: clamp(1.5rem, 7vw, 2.2rem);
+  }
+
+  .contactdetails ul {
+    padding-left: 0;
+  }
+
+  .contactdetails ul li {
+    padding: 10px;
+  }
+
+  .mainfooter {
+    padding: 18px 12px;
+  }
+
+  .subfooter {
+    padding: 16px 10px;
+  }
+}
+
+
+@media screen and (max-width: 360px) {
+  header {
+    width: calc(100% - 16px);
+    padding: 7px 8px;
+  }
+
+  .logo {
+    max-width: 58%;
+  }
+
+  .menubtn {
+    padding: 7px;
+  }
+
+  .stick {
+    width: 24px;
+  }
+
+  .c2a {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #workbtn,
+  #reachbtn {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+  .aboutimage {
+    width: min(75vw, 16rem);
+  }
+}
+
+
+@media screen and (min-width: 1200px) {
+  .about,
+  .services-wrapper,
+  .whycontainer,
+  .contact-wrapper {
+    max-width: 1100px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
