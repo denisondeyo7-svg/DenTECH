@@ -855,17 +855,17 @@ input{
 
   border-radius: 7px;
 
-  border: 1px solid #5c5d5e31;
+  border: 1px solid #868686a8;
 
 }
 
 #message{
-
+ background: #16171d5e;;
   padding: 10px;
 
   height: 6rem;
 
-  border: 1px solid #5c5d5e31;
+  border: 1px solid #868686a8;
 
   border-radius: 10px;
 

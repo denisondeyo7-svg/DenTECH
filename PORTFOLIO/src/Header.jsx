@@ -11,7 +11,7 @@ function Header(){
 
             <div className="links">
                 <nav>
-                    <a href="#home"><i className='fa-regular fa-house'></i>         Home</a>
+                    <a href="#home"><i className='fa-regular fa-home'></i>         Home</a>
                     <a href="#about">About</a>
                     <a href="#services">Services</a>
                     <a href="">Project</a>
