@@ -7,7 +7,9 @@ body{
   width: 100%;
 
 }
-
+  h1,h2 ,p{
+  color: rgb(217, 218, 219);
+}
 html{
   scroll-behavior: smooth;
 }
@@ -845,6 +847,7 @@ form h1{
 }
 
 input{
+  background: #16171d;
 
   padding: 14px;
 
@@ -1718,6 +1721,9 @@ footer {
   header {
     width: calc(100% - 16px);
     padding: 7px 8px;
+  }
+  .myname{
+    font-size: 22px;
   }
 
   .logo {
