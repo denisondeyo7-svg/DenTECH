@@ -95,16 +95,16 @@ nav a:hover{
 
 }
 .sidebar {
-  display: none;
+   display: none;
     position: fixed;
     top: 0;
     right: 0;
-    width: 100%;
-    height: auto;
+    width: 256px;
+    height: 100vh;
     background: #16171d;
     padding: 25px;
     z-index: 1000;
-    box-shadow: -5px 0 20px rgba(0, 255, 255, 0.15);
+    border: 1px solid rgba(0, 255, 255, 0.37);
 }
 
 .sidebar button {
