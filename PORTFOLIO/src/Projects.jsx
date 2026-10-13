@@ -21,7 +21,8 @@ function Projects() {
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ducimus modi!</p>
             </div>
             <div className="btn">
-              <button>View Live Site</button>
+              
+              <a href="https://campus-study-hub.totalh.net/"><button>View Live Site</button></a>
             </div>
           </div>
 

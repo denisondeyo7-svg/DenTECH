@@ -5,12 +5,10 @@ function Footer(){
         <footer><br /><br />
             <div className="mainfooter">
                 <div className="FooterSocials">
-                    <i className='fab fa-github'></i>
-                    <i className='fab fa-linkedin'></i>
-                    <i className='fab fa-whatsapp'></i>
-                    <i className='fab fa-facebook'></i>
-                    <i className='fab fa-twitter'></i>
-                    <i className='fas fa-phone'></i>
+                    <a href="https://github.com/denisondeyo7-svg"><i className='fab fa-github'></i></a>
+                    <a href="https://www.linkedin.com/in/denis-ondeyo-8885813b6/"><i className='fab fa-linkedin'></i></a>
+                    <a href="https://wa.me/254726534460"><i className='fab fa-whatsapp'></i></a>
+                    <a href="tel:+254726534460"><i className='fas fa-phone'></i></a>
                 </div>
                 <h2>Quick Links</h2>
                 <nav>
@@ -20,11 +18,15 @@ function Footer(){
                     <Link to="/Projects">Projects</Link>
                     <a href="/#contact">Contact</a>
                 </nav>
-
+               
+                <h2>Management</h2>
+                    <nav>
+                        <Link to="/Admin">Admin</Link>
+                    </nav>
                 
             </div>
             <div className="subfooter">
-                <small>©copy DenTECH-2026 | All rights reserved | Developed By Denis</small>
+                <small>©DenTECH-2026 | All rights reserved | Developed By Denis</small>
             </div>
         </footer>
     );

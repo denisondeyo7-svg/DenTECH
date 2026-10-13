@@ -7,6 +7,9 @@ import Myservices from './Services.jsx'
 import Contact from './Contact.jsx'
 import Footer from './Footer.jsx'
 import Projects from './Projects.jsx'
+import Reachout from './Contactpage.jsx'
+import Dashboard from './Admin.jsx'
+import Content from './Admincontent.jsx'
 
 
 function Home() {
@@ -30,10 +33,19 @@ function Home() {
 function App(){
   return(
     <BrowserRouter>
-      <Header/>
         <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/Projects" element={<Projects/>}/>
+          <Route path="/" element={<><Header/><Home/></>}/>
+          <Route path="/Projects" element={
+              <><Header/><Projects/></>}/>
+          <Route path="/contact" element={
+              <><Header/><Reachout/></>}/>
+          <Route path="/Admin" element={
+            
+            <>
+              <Dashboard/>
+              <Content/>
+            </>
+            }/>
         </Routes>
       <Footer/>
     </BrowserRouter>

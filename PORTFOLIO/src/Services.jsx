@@ -7,7 +7,7 @@ function Myservices(){
     const services = [
         {number:"1" ,Skill:"Web Development" ,AboutSkill:"Building responsive, modern, and functional websites tailored to different needs."},
         {number:"2" ,Skill:"Frontend Development" ,AboutSkill:"Creating modern, responsive interfaces using HTML, CSS, JavaScript, and React."},
-        {number:"3" ,Skill:"Backend Development" ,AboutSkill:"Building secure backend systems with CRUD functionality using PHP, MySQL, and Django."},
+        {number:"3" ,Skill:"Backend Development" ,AboutSkill:"Building secure backend systems with CRUD functionality using PHP, MySQL."},
         {number:"4" ,Skill:"UI Design" ,AboutSkill:"Designing clean digital interfaces that communicate effectively."}
 
 
@@ -19,8 +19,7 @@ function Myservices(){
         {number:"3", toolname:"Javascript"},
         {number:"4", toolname:"React"},
         {number:"5", toolname:"PHP"},
-        {number:"6", toolname:"DJANGO"},
-        {number:"7", toolname:"mySQL"}
+        {number:"6", toolname:"mySQL"}
     ]
 
     return(

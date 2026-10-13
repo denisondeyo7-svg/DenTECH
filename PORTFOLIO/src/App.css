@@ -81,19 +81,7 @@ nav a:hover{
 
 }
 
-.sticks{
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
 
-}
-
-.stick{
-  background: aqua;
-  width: 30px;
-  height: 2px;
-
-}
 .sidebar {
    display: none;
     position: fixed;
@@ -368,6 +356,8 @@ nav a:hover{
 }
 
 #workbtn{
+  text-decoration: none;
+  
   display: flex;
 
   align-items: center;
@@ -391,7 +381,13 @@ nav a:hover{
   transition: .3s ease-in;
 
 }
-
+.message{
+  padding: 10px;
+  border-radius: 5px;
+  background: #ffffff46;
+  text-align: center;
+  color: #c5c4c4;
+}
 #workbtn:hover{
   
   background: transparent;
@@ -403,6 +399,8 @@ nav a:hover{
 }
 
 #reachbtn{
+  text-decoration: none;
+  
   display: flex;
 
   align-items: center;
@@ -684,6 +682,8 @@ nav a:hover{
 
   font-size: 18px;
 
+  text-decoration: none;
+
 }
 
 
@@ -945,7 +945,8 @@ nav a:hover{
 }
 
 form{
-
+  max-width: 90%;
+  width: 100%;
   display: flex;
 
   flex-direction: column;
@@ -1090,6 +1091,101 @@ footer{
   padding: 22px;
 
 }
+
+.admin-container{
+  display: flex;
+  width: 100%;
+}
+.adminsidebar{
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+  height: 100vh;
+  background: #000;
+  z-index: 1000;
+}
+
+.adminsidebar button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-end;
+  background: transparent;
+  border: 1px solid #c5c4c45d;
+  margin: 10px;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 10px;
+  font-size: 20px;
+}
+.adminsidebar button:hover{
+  border: 1px solid rgba(0, 255, 255, 0.733);
+  color: aqua;
+  background: rgba(0, 255, 255, 0.11);
+  box-shadow:  0 0 10px rgba(0, 255, 255, 0.842);
+}
+
+.adminsidebar  .navlink{
+  padding: 16px 20px;
+}
+
+.navlink{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navlink i{
+  font-size: 22px;
+  color: #c5c4c4;
+}
+
+.navlink a{
+  color: #c5c4c4;
+  text-decoration: none;
+}
+.navlink:hover{
+  
+  background: rgba(0, 255, 255, 0.274);
+  color: #000;
+}
+
+.admin-content{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  max-width: 90%;
+  width: 100%;
+  align-items: center;
+  align-self: center;
+  justify-self: center;
+}
+
+.sidebar-collapsed .adminsidebar {
+  width: 70px;
+  padding: 20px 0;
+  align-items: center;
+}
+
+.sidebar-collapsed .navlink a {
+  display: none;
+}
+
+.sidebar-collapsed .toggle-btn {
+  align-self: center;
+}
+
+.admin-content {
+  flex-grow: 1;
+  padding: 20px;
+}
+.welcome-message{
+  line-height: 100%;
+}
+
+
+
+
 
 @media screen and (max-width: 480px) {
 
@@ -1440,8 +1536,10 @@ header {
   gap: 16px;
 }
 
+
 #workbtn,
 #reachbtn {
+  
   display: flex;
   align-items: center;
   justify-content: center;

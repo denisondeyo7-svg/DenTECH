@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 function LandingPageContent(){
 
     const Content =[
@@ -38,19 +39,17 @@ function LandingPageContent(){
                 
                 <br /><br />
                 <div className="c2a">
-                    <button id="workbtn">My Work        <i className="fas fa-code"></i></button>
-                    <button id="reachbtn">Reach out     <i className="fas fa-phone"></i></button>
+                    <Link to="/Projects"id="workbtn"><i className="fas fa-code"></i>My Work</Link>
+                    <Link to="/contact"id="reachbtn"><i className="fas fa-phone"></i>Reach out </Link>
                     
                 </div>
                 <br /><br /><br />
 
                 <div className="socials-links">
-                    <i className='fab fa-github'></i>
-                    <i className='fab fa-linkedin'></i>
-                    <i className='fab fa-whatsapp'></i>
-                    <i className='fab fa-facebook'></i>
-                    <i className='fab fa-twitter'></i>
-                    <i className='fas fa-phone'></i>
+                    <a href="https://github.com/denisondeyo7-svg"><i className='fab fa-github'></i></a>
+                    <a href="https://www.linkedin.com/in/denis-ondeyo-8885813b6/"><i className='fab fa-linkedin'></i></a>
+                    <a href="https://wa.me/254726534460"><i className='fab fa-whatsapp'></i></a>
+                    <a href="tel:+254726534460"><i className='fas fa-phone'></i></a>
                 </div>
 
             </div>

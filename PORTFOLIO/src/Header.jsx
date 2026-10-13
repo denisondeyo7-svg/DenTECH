@@ -20,16 +20,13 @@ function Header(){
                     <a href="/#services">Services</a>
                     <Link to="/Projects">Projects</Link>
                     <a href="/#contact">Contact</a>
+                    <Link to="/Admin">Admin</Link>
                 </nav>
             </div>
 
             
             <div className="menubtn"onClick={() => setMenuOpen(!menuOpen)}>
-                <div className="sticks">
-                    <div className="stick"></div>
-                    <div className="stick"></div>
-                    <div className="stick"></div>
-                </div>
+                <i className={menuOpen ? "fas fa-times" : "fas fa-bars"}></i>
             </div>
 
             {menuOpen && (
@@ -44,7 +41,11 @@ function Header(){
                         <a href="/#services" onClick={() => setMenuOpen(false)}>Services</a>
                         <Link to="/Projects" onClick={() => setMenuOpen(false)}>Projects</Link>
                         <a href="/#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+                        <Link to="/Admin"onClick={()=> setMenuOpen(false)}>Admin Page</Link>
+
                     </nav>
+
+                    
                 </div>
             )}
         </header>

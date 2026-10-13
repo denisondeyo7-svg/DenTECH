@@ -1,5 +1,27 @@
+import { useState } from "react";
+
 function Contact(){
 
+    const [message, setMessage] = useState("");
+
+    function handleSubmit(event){
+
+        event.preventDefault();
+
+        const form = event.target;
+
+        fetch("http://localhost/dentech-backend/contact.php",{
+
+            method: "POST",
+            body: new FormData(form)
+
+        })
+        
+        .then(response => response.text())
+        .then(data => {
+            setMessage("Your message has been sent successfully!");
+        });
+    }
     return(
         <section className="Contactsection" id="contact">
             <h1>Get In Touch</h1>
@@ -19,16 +41,22 @@ function Contact(){
                     
                 </div>
                 <div className="form">
-                    <form action="" method="post">
+                    <form onSubmit={handleSubmit}>
                         <h1>Send Request</h1>
+                        {message && <p className="message">{message}</p>}
                         <div className="input">
                             <label htmlFor="firstname">Firstname</label>
-                            <input type="text" name="firstname" required/>
+                            <input type="text" name="firstname"id="firstname" required/>
                         </div>
 
                         <div className="input">
-                            <label htmlFor="Lastname">Lastname</label>
-                            <input type="text" name="Lastname" required/>
+                            <label htmlFor="lastname">Lastname</label>
+                            <input type="text" name="lastname" id="lastname"required/>
+                        </div>
+
+                        <div className="input">
+                            <label htmlFor="number">Number</label>
+                            <input type="tel" name="number"id="number" required/>
                         </div>
 
                         <div className="input">

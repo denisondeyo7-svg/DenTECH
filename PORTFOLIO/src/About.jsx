@@ -1,5 +1,5 @@
 import aboutImage from './assets/1785571552364 (1)-Photoroom.png'
-
+import { Link } from 'react-router-dom'
 function About(){
 
     const content = [
@@ -30,7 +30,7 @@ function About(){
                                 <h1>{content.contentTheme}</h1>
                                 <p>{content.mycontent}</p>
                                 <br />
-                                <button id='aboutbtn'>View My Projects <i className='fas fa-globe'></i></button>
+                                <Link to="/Projects"id='aboutbtn'>View My Projects <i className='fas fa-globe'></i></Link>
                             </div>
                         ))}
 
