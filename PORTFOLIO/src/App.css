@@ -962,7 +962,8 @@ form h1{
 }
 
 .input{
-
+  color: #d6d3d3;
+  
   display: flex;
 
   flex-direction: column;
@@ -985,6 +986,7 @@ input{
 }
 
 #message{
+  color: #d6d3d3;
  background: #16171d5e;;
   padding: 10px;
 
@@ -1629,6 +1631,7 @@ button,
 input,
 textarea,
 select {
+  
   max-width: 100%;
   font: inherit;
 }
