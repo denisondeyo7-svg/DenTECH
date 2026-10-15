@@ -1,5 +1,4 @@
 import {BrowserRouter , Routes , Route} from 'react-router-dom'
-
 import Header from './Header.jsx'
 import LandingPageContent from './LandingPage.jsx'
 import About from './About.jsx'
@@ -9,8 +8,9 @@ import Footer from './Footer.jsx'
 import Projects from './Projects.jsx'
 import Reachout from './Contactpage.jsx'
 import Dashboard from './Admin.jsx'
-import Content from './Admincontent.jsx'
-
+import Content from './Dashboard.jsx'
+import Login from './AdminLogin.jsx'
+import Protected from './ProtectedRoute.jsx'
 
 function Home() {
 
@@ -39,12 +39,17 @@ function App(){
               <><Header/><Projects/></>}/>
           <Route path="/contact" element={
               <><Header/><Reachout/></>}/>
+          <Route path="/login" element={<Login />}
+        />
+
           <Route path="/Admin" element={
             
-            <>
-              <Dashboard/>
-              <Content/>
-            </>
+            <Protected>
+              <>
+                <Dashboard/>
+                <Content/>
+              </>
+            </Protected>
             }/>
         </Routes>
       <Footer/>

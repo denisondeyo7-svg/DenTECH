@@ -1,0 +1,52 @@
+import { Link } from 'react-router-dom'
+function Content(){
+    const boxes = [
+        {number:"1" , No:"7+" ,name:"Projects",i:"fas fa-computer"},
+        {number:"2" , No:"2" ,name:"LiveProjects",i:"fas fa-globe"},
+        {number:"3" , No:"3" ,name:"Under Dev",i:"fas fa-gear"},
+        {number:"4" , No:"8+" ,name:"Repos",i:"fab fa-github"}
+    ]
+    return(
+        <section className="admin-content">
+            
+            <div className="admintop">
+                <Link to="/Login">Login</Link>
+                <h2 className="welcome-message">Welcome back Denis</h2>
+
+                <a href="">
+                    <p>Logout  <i className='fas fa-power-off'></i></p>
+                </a>
+            </div>
+            
+            <div className="content-container">
+                
+                <div className="boxes">
+                    {boxes.map((box)=>(
+                        <div className="adminbox"key={box.number}>
+                            <p>{box.No}</p>
+                            <div className="number">
+                                <h2>{box.name}</h2>
+                                <i className={box.i}></i>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+<br /><br />
+                <div className="admin-projects-container">
+                   <div className="projs">
+                        <fieldset>
+                            <legend>Projects</legend>
+                            <a href="">Campus Study Hub</a>
+                            <a href="">JNR Labtronics</a>
+                            <a href="">Ceddah students home </a>
+                            <a href="">DenTECH</a>
+                        </fieldset>
+                   </div>
+
+                   
+                </div>
+            </div>
+        </section>
+    )
+}
+export default Content

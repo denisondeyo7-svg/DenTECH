@@ -28,10 +28,10 @@ function Reachout(){
             <br /><br />
             <h1>Get In Touch</h1>
             <div className="contact-wrapper">
-                <h1>Have a project in mind ? Let's build something great together.</h1>
+                <h1>Have a project in mind ? Let's build something beautiful together.</h1>
                 
                 <div className="contact-container">
-                    <p>Whether you need a website, web application, backend system, or a creative design, I'd love to hear about your idea.</p>
+                    <h2>Whether you need a website, web application, I'd love to hear about your idea.</h2>
                     <div className="contactdetails">
                         <ul>
                             <li>Email: <a href="mailto:denisondeyo7@gmail.com">denisondeyo7@gmail.com</a></li>

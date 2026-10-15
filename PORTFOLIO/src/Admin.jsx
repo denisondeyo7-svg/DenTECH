@@ -28,8 +28,13 @@ function Dashboard() {
         </div>
         
         <div className="navlink">
-          <i className="fas fa-gear"></i>
-          <a href="">Account</a>
+          <i className="fas fa-user-gear"></i>
+          <a href="">Change Username</a>
+        </div>
+
+        <div className="navlink">
+          <i className="fas fa-lock"></i>
+          <a href="">Change Password</a>
         </div>
         
         <div className="navlink">
