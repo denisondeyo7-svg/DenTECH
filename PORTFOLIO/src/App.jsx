@@ -39,7 +39,7 @@ function App(){
               <><Header/><Projects/></>}/>
           <Route path="/contact" element={
               <><Header/><Reachout/></>}/>
-          <Route path="/login" element={<Login />}
+          <Route path="/Login" element={<Login />}
         />
 
           <Route path="/Admin" element={

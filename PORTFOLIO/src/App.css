@@ -27,7 +27,7 @@ header{
   padding: 10px;
   border: 1px solid rgba(0, 255, 255, 0.418);
   border-radius: 40px;
-  box-shadow:  0 0 15px rgba(0, 255, 255, 0.356);
+  box-shadow:inset  0 0 15px rgba(0, 255, 255, 0.356);
   background: #16171d;
 }
 
@@ -41,6 +41,7 @@ nav{
 nav a{
   color: aqua;
   text-decoration: none;
+  
 
 }
 
@@ -944,6 +945,9 @@ nav a:hover{
 
 }
 
+.contactdetails ul li a{
+  color: #c5c4c4;
+}
 form{
   max-width: 90%;
   width: 100%;
@@ -1046,6 +1050,10 @@ footer{
 
 }
 
+
+footer i{
+  color: #c5c4c4;
+}
 .mainfooter{
 
   display: flex;
@@ -1671,6 +1679,8 @@ header {
   padding: 8rem 16px 3rem;
 }
 
+
+
 .heros {
   width: 100%;
   max-width: 900px;
@@ -1686,6 +1696,10 @@ header {
   font-size: clamp(2rem, 5vw, 4.5rem);
 }
 
+.den{
+  color: #0bffeb;
+  
+}
 .herosContent p {
   max-width: 720px;
 }
@@ -1859,6 +1873,7 @@ textarea,
 #message {
   width: 100%;
   min-width: 0;
+  color: #fff;
 }
 
 #message {

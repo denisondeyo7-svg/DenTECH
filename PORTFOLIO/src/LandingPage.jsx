@@ -23,7 +23,7 @@ function LandingPageContent(){
             <div className="load"></div>
             <br />
             <div className="heros">
-                <h1 className="myname">Meet , Denis Ondeyo</h1>
+                <h1 className="myname">Meet , <span className="den">Denis</span> Ondeyo</h1>
                 {Content.map((Content)=>(
                     <div className="herosContent"key={Content.number}>
                         <h2>{Content.developer}</h2>

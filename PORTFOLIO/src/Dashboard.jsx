@@ -1,4 +1,7 @@
 import { Link } from 'react-router-dom'
+import { useEffect, useState } from "react";
+
+
 function Content(){
     const boxes = [
         {number:"1" , No:"7+" ,name:"Projects",i:"fas fa-computer"},
@@ -6,14 +9,53 @@ function Content(){
         {number:"3" , No:"3" ,name:"Under Dev",i:"fas fa-gear"},
         {number:"4" , No:"8+" ,name:"Repos",i:"fab fa-github"}
     ]
+
+    const [username, setUsername] = useState("");
+
+    useEffect(() => {
+        fetch("http://localhost/dentech-backend/check-session.php", {
+            credentials: "include"
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Session not found");
+            }
+
+            return response.json();
+        })
+        .then(data => {
+            setUsername(data.username);
+        })
+        .catch(error => {
+            console.log("Session error:", error);
+        });
+    }, []);
+
+    
+    function handleLogout() {
+        fetch("http://localhost/dentech-backend/logout.php", {
+            method: "POST",
+            credentials: "include"
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.loggedout) {
+                navigate("/login");
+            }
+        })
+        .catch(error => {
+            console.log("Logout error:", error);
+        });
+    }
+
     return(
         <section className="admin-content">
             
             <div className="admintop">
-                <Link to="/Login">Login</Link>
-                <h2 className="welcome-message">Welcome back Denis</h2>
+                
+                <h2 className="welcome-message">Welcome back ,{username}</h2>
 
-                <a href="">
+                <a href=""onClick={handleLogout}>
                     <p>Logout  <i className='fas fa-power-off'></i></p>
                 </a>
             </div>
