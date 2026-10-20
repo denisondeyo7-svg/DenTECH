@@ -1,0 +1,71 @@
+import projImage from './assets/Screenshot 2026-10-10 140511.png'
+
+function AdminProjects() {
+  return (
+    <section className="Projects">
+        <div className="buttons">
+            
+            <a href="">Add New Project  <i class="fas fa-plus"></i></a>
+        </div>
+      <div className="load"></div>
+      <div className="proj-container">
+        <h1>Projects</h1>
+
+        <div className="projects-wrapper">
+          
+
+          <div className="projectCard">
+            <div className="image">
+              <img src={projImage} alt="" />
+            </div>
+            <div className="name">
+              <h2>Campus Study Hub</h2>
+            </div>
+            <div className="description">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ducimus modi!</p>
+            </div>
+            <div className="btn">
+              
+              <a href="https://campus-study-hub.totalh.net/"><button>View Live Site</button></a>
+            </div>
+          </div>
+
+          <div className="projectCard">
+            <div className="image">
+              <img src={projImage} alt="" />
+            </div>
+            <div className="name">
+              <h2>Campus Study Hub</h2>
+            </div>
+            <div className="description">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ducimus modi!</p>
+            </div>
+            <div className="btn">
+              <button>View Live Site</button>
+            </div>
+          </div>
+
+          <div className="projectCard">
+            <div className="image">
+              <img src={projImage} alt="" />
+            </div>
+            <div className="name">
+              <h2>Campus Study Hub</h2>
+            </div>
+            <div className="description">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ducimus modi!</p>
+            </div>
+            <div className="btn">
+              <button>View Live Site</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+<br /><br /><br /><br /><br />
+    </section>
+    
+  );
+}
+
+export default  AdminProjects;

@@ -54,7 +54,11 @@ function LandingPageContent(){
 
             </div>
             <div className="whatsapp">
-                <a href="https://wa.me/254726534460"><i className="fab fa-whatsapp"></i></a>
+                <a href="https://wa.me/254726534460?text=Hi%20Denis%2C%20it%27s%20a%20pleasure%20to%20connect%20with%20you.%20I%20recently%20came%20across%20your%20portfolio%20online%20and%20was%20quite%20impressed%20by%20your%20work.%20I%20would%20love%20to%20schedule%20a%20brief%20chat%20to%20discuss%20something.%0A"
+                target="_blank"
+                rel="noopener noreferrer">
+                 <i className="fab fa-whatsapp"></i>
+                </a>
             </div>
         </section>
     )

@@ -12,7 +12,7 @@ function Login(){
 
         const form = event.target;
 
-        fetch("http://192.168.18.3/dentech-backend/login.php", {
+        fetch("http://localhost/dentech-backend/login.php", {
             method: "POST",
             body: new FormData(form),
             credentials: "include"
@@ -27,6 +27,7 @@ function Login(){
                 navigate("/Admin");
             }
         })
+        
         .catch(error => {
             console.log("Error:", error);
             setMessage("Something went wrong. Please try again.");

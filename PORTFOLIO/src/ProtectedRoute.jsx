@@ -1,8 +1,10 @@
 
 import { useEffect, useState } from "react";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Protected({ children }) {
+
+    const navigate= useNavigate();
     const [authenticated, setAuthenticated] = useState(null);
 
     useEffect(() => {
@@ -29,7 +31,7 @@ function Protected({ children }) {
     }
 
     if (!authenticated) {
-        return <Navigate to="/Login" replace />;
+        return navigate("/login");
     }
 
     return children;

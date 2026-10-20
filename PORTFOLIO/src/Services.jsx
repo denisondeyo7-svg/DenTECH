@@ -1,4 +1,4 @@
-import Serviceimage from './assets/file_00000000997881f4ac036c0ebe8f3bc5.png'
+import Serviceimage from './assets/logo.png'
 function Myservices(){
     const SectionTitle=[
         {number:"1", Title:"Services"}

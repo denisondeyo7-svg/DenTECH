@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { Link} from 'react-router-dom'
 
 function Dashboard() {
+
   const [isCollapsed, setIsCollapsed] = useState(false);
 
   return (
@@ -14,33 +16,29 @@ function Dashboard() {
 
         <div className="navlink">
           <i className="fas fa-layer-group"></i>
-          <a href="">Dashboard</a>
+          <Link to="/Admin">Dashboard</Link>
         </div>
 
         <div className="navlink">
           <i className="fas fa-computer"></i>
-          <a href="">Projects</a>
+          <Link to="/myprojects">Projects</Link>
         </div>
         
         <div className="navlink">
           <i className="fas fa-paper-plane"></i>
-          <a href="">Messages</a>
+          <Link to="/messages">Messages</Link>
         </div>
         
         <div className="navlink">
           <i className="fas fa-user-gear"></i>
-          <a href="">Change Username</a>
+          <Link to="/username">Change Username</Link>
         </div>
 
         <div className="navlink">
           <i className="fas fa-lock"></i>
-          <a href="">Change Password</a>
+          <Link to="/password">Change Password</Link>
         </div>
-        
-        <div className="navlink">
-          <i className="fas fa-power-off"></i>
-          <a href="">Logout</a>
-        </div>
+      
         
         <div className="navlink">
           <i className="fas fa-globe"></i>

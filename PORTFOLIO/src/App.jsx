@@ -11,6 +11,10 @@ import Dashboard from './Admin.jsx'
 import Content from './Dashboard.jsx'
 import Login from './AdminLogin.jsx'
 import Protected from './ProtectedRoute.jsx'
+import AdminProjects from './AdminProjec.jsx'
+import Adminmessages from './Messages.jsx'
+import ChangeUser from './ChangeUsername.jsx'
+import ChangePass from './Password.jsx'
 
 function Home() {
 
@@ -51,6 +55,34 @@ function App(){
               </>
             </Protected>
             }/>
+          <Route path="/myprojects" element={
+              <>
+                <Dashboard/>
+                <AdminProjects/>
+              </>
+          }/>
+
+          <Route path="/messages" element={
+              <>
+                <Dashboard/>
+                <Adminmessages/>
+              </>
+          }/>
+
+          <Route path="/password" element={
+              <>
+                <Dashboard/>
+                <ChangePass/>
+              </>
+          }/>
+
+          <Route path="/username" element={
+              <>
+                <Dashboard/>
+                <ChangeUser/>
+              </>
+          }/>
+
         </Routes>
       <Footer/>
     </BrowserRouter>
