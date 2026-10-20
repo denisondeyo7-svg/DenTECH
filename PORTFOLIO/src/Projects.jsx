@@ -52,7 +52,7 @@ function Projects() {
               <div className="btn">
                 
                 <a href={project.url} target="_blank"rel="noopener noreferrer">
-                  <button>View Live Site</button>
+                  <button className="view">View Live Site</button>
                 </a>
 
                 <p>{project.status}</p>

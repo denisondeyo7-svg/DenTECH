@@ -26,7 +26,7 @@ function Footer(){
                 
             </div>
             <div className="subfooter">
-                <small>©DenTECH-2026 | All rights reserved | Developed By Denis</small>
+                <small>©DenTECH-2026 <br /> All rights reserved | Developed By Denis</small>
             </div>
         </footer>
     );

@@ -512,7 +512,7 @@ nav a:hover{
 }
 
 .whatsapp{
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.568);
+  box-shadow: 2px 0 10px rgba(0, 255, 255, 0.349);
 
   display: flex;
 
@@ -524,13 +524,13 @@ nav a:hover{
 
   z-index: 1000;
 
-  right: 35px;
+  right: 25px;
 
-  bottom: 55px;
+  bottom: 3rem;
 
-  background: rgb(3, 156, 36);
+  background:  rgba(0, 255, 255, 0.719);
 
-  border-radius: 50%;
+  border-radius: 20%;
 
   padding: 12px;
 
@@ -621,7 +621,8 @@ nav a:hover{
 
   align-items: center;
 
-  width: 90%;
+  width: 80%;
+  
 
   gap: 12px;
 
@@ -725,7 +726,7 @@ nav a:hover{
 }
 
 .serviceimage{
-  background: rgba(0, 255, 255, 0.062);
+
 
   max-width: 85%;
 
@@ -1844,11 +1845,7 @@ header {
 .about,
 .about-wrapper,
 .about-content,
-.why,
 .whycontainer,
-.Services,
-.services-wrapper,
-.service-card-container,
 .Contactsection,
 .contact-wrapper,
 .contact-container,
@@ -1861,11 +1858,6 @@ form,
 
 .tools {
   justify-content: center;
-}
-
-.whatsapp {
-  right: max(16px, env(safe-area-inset-right));
-  bottom: max(18px, env(safe-area-inset-bottom));
 }
 
 .about {
@@ -2053,7 +2045,7 @@ footer {
 @media screen and (max-width: 768px) {
   header {
     top: 12px;
-    width: calc(100% - 24px);
+    width: 90%;
     padding: 8px 10px;
   }
   
@@ -2098,7 +2090,9 @@ footer {
     flex-direction: column;
     align-items: center;
     gap: 22px;
+    width: 80%;
   }
+  
 
   #workbtn,
   #reachbtn {
@@ -2145,7 +2139,7 @@ footer {
   }
 
   .services-wrapper {
-    max-width: 100%;
+    max-width: 90%;
   }
 
   .service-card-container {
@@ -2159,12 +2153,18 @@ footer {
     padding: 18px;
   }
 
+  .Contactsection h1{
+    line-height: 120%;
+  }
   .Contactsection {
+    align-self: center;
     padding: 36px 12px;
+    width: 90%;
   }
 
   .contact-container {
     gap: 20px;
+    
   }
 
   .mainfooter nav {
@@ -2173,6 +2173,10 @@ footer {
 
   footer {
     top: auto;
+  }
+
+  .whatsapp{
+    right: 40px;
   }
 }
 
@@ -2223,9 +2227,10 @@ footer {
   }
 
   .whatsapp {
-    width: 3rem;
-    height: 3rem;
+    width: 4rem;
+    height: 4rem;
     padding: 8px;
+    right: 32px;
   }
 
   .whatsapp i {
@@ -2249,6 +2254,28 @@ footer {
     padding: 10px;
   }
 
+  
+  .Services{
+    align-items: center;
+    justify-content: center;
+  }
+  .services-wrapper{
+    max-width: 90%;
+    width: 100%;
+  }
+  .service-card-container{
+    
+    width: 100%;
+  }
+  .contact-container h1,
+  .contact-wrapper h1,
+  .tools-wrapper h1{
+    line-height: 127%;
+  }
+  .contact-wrapper{
+    width: 80%;
+  }
+
   .mainfooter {
     padding: 18px 12px;
   }
@@ -2261,12 +2288,74 @@ footer {
 
 @media screen and (max-width: 360px) {
   header {
-    width: calc(100% - 16px);
+    position: fixed;
+    top: 1rem;
+    width: 90%;
     padding: 7px 8px;
   }
+
+  .whatsapp{
+    position: fixed;
+    height: 4rem;
+    width: 4rem;
+    right: 53px;
+    bottom: 6rem;
+    
+  }
+
+  .whatsapp i{
+    font-size: 42px;
+  }
+  
   .projectCard{
     width: 100%;
   }
+
+  .btn{
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 12px;
+  }
+  .view{
+    width: 100%;
+   
+
+  }
+
+  .projectCard .btn p{
+
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    background: rgba(0, 255, 255, 0.027);
+    border: 1px solid aqua;
+    color: aqua;
+    border-radius: 0;
+    
+
+}
+  .Services{
+    align-items: center;
+    justify-content: center;
+  }
+  .services-wrapper{
+    max-width: 90%;
+    width: 100%;
+  }
+  .service-card-container{
+    
+    width: 100%;
+  }
+  .contact-container h1,
+  .contact-wrapper h1,
+  .tools-wrapper h1{
+    line-height: 127%;
+  }
+  .contact-wrapper{
+    width: 80%;
+  }
+  
   .sidebar{
 
     display: block;
@@ -2274,6 +2363,12 @@ footer {
   }
   .myname{
     font-size: 22px;
+  }
+  
+  .adminform{
+
+    width: 80%;
+    align-self: center;
   }
 
   .logo {
@@ -2295,13 +2390,15 @@ footer {
 
   #workbtn,
   #reachbtn {
+    align-self: center;
     flex: 1 1 auto;
-    width: 100%;
+    width: 90%;
   }
 
   .aboutimage {
     width: min(75vw, 16rem);
   }
+
 }
 
 

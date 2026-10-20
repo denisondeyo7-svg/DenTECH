@@ -21,22 +21,22 @@ function Dashboard() {
 
         <div className="navlink">
           <i className="fas fa-computer"></i>
-          <Link to="/myprojects">Projects</Link>
+          <Link to="/myprojects" >Projects</Link>
         </div>
         
         <div className="navlink">
           <i className="fas fa-paper-plane"></i>
-          <Link to="/messages">Messages</Link>
+          <Link to="/messages" >Messages</Link>
         </div>
         
         <div className="navlink">
           <i className="fas fa-user-gear"></i>
-          <Link to="/username">Change Username</Link>
+          <Link to="/username" >Change Username</Link>
         </div>
 
         <div className="navlink">
           <i className="fas fa-lock"></i>
-          <Link to="/password">Change Password</Link>
+          <Link to="/password" >Change Password</Link>
         </div>
       
         

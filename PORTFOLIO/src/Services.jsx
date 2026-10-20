@@ -1,4 +1,4 @@
-import Serviceimage from './assets/logo.png'
+import Serviceimage from './assets/file_00000000997881f4ac036c0ebe8f3bc5.png'
 function Myservices(){
     const SectionTitle=[
         {number:"1", Title:"Services"}
@@ -32,11 +32,13 @@ function Myservices(){
             ))}
 
             <div className="services-wrapper">
+                
                 <h2>What I Do</h2>
-
+<br />
                 <div className="serviceimage">
                     <img src={Serviceimage} alt="" />
                 </div>
+                <br />
                 <div className="service-card-container">
                     {services.map((service)=>(
                         <div className="service-card"key={service.number}>
