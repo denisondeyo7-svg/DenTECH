@@ -512,7 +512,7 @@ nav a:hover{
 }
 
 .whatsapp{
-  box-shadow: 2px 0 10px rgba(0, 255, 255, 0.349);
+  box-shadow: 2px 0 10px rgba(0, 255, 255, 0.445);
 
   display: flex;
 
@@ -524,11 +524,11 @@ nav a:hover{
 
   z-index: 1000;
 
-  right: 25px;
+  right: 19px;
 
   bottom: 3rem;
 
-  background:  rgba(0, 255, 255, 0.719);
+  background:  rgb(0, 255, 255);
 
   border-radius: 20%;
 
@@ -544,7 +544,7 @@ nav a:hover{
 
   font-size: 40px;
 
-  color: #fff;
+  color: #000;
 
 }
 
