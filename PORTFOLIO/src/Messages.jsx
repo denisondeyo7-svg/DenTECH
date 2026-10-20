@@ -16,11 +16,11 @@ function Adminmessages(){
         .then(result=>{
             if(result.success){
                 setMessage(result.data);
-                setStatus("");
+                
             }
              else {
                 setMessage([]);
-                setStatus("Messages not found");
+                setStatus(result.message);
             }
         })
         .catch(error=>{
@@ -37,7 +37,7 @@ function Adminmessages(){
         <div className="messages">
             <h1>Messages</h1>
 
-                {status && <p>{status}</p>}
+                {status && <p className="message">{status}</p>}
             <div className="message-container">
                 
                 {messages.map((message)=>(

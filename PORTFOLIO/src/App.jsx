@@ -15,6 +15,8 @@ import AdminProjects from './AdminProjec.jsx'
 import Adminmessages from './Messages.jsx'
 import ChangeUser from './ChangeUsername.jsx'
 import ChangePass from './Password.jsx'
+import Add from './Addprojects.jsx'
+
 
 function Home() {
 
@@ -80,6 +82,13 @@ function App(){
               <>
                 <Dashboard/>
                 <ChangeUser/>
+              </>
+          }/>
+
+          <Route path="/Addproject" element={
+              <>
+                <Add/>
+                
               </>
           }/>
 
