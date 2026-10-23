@@ -1,5 +1,35 @@
 import Serviceimage from './assets/file_00000000997881f4ac036c0ebe8f3bc5.png'
+import { useEffect ,useState } from "react";
+import Projects from "./Projects.jsx"
+
+
+  
 function Myservices(){
+    const[ projects,setProject] = useState([]);
+  const[ message,setmessage] = useState("");
+
+  useEffect(()=>{
+
+    fetch("http://localhost/dentech-backend/projects.php",{
+      method:"GET",
+      credentials:"include",
+    })
+
+    .then(response=> response.json())
+    .then(result=>{
+      if(result.success){
+        setProject(result.data);
+      }
+      else{
+        setmessage(result.message);
+      }
+    })
+
+    .catch(error=>{
+      console.log("error:",error);
+    });
+
+  },[]);
     const SectionTitle=[
         {number:"1", Title:"Services"}
     ];
@@ -8,7 +38,7 @@ function Myservices(){
         {number:"1" ,Skill:"Web Development" ,AboutSkill:"Building responsive, modern, and functional websites tailored to different needs."},
         {number:"2" ,Skill:"Frontend Development" ,AboutSkill:"Creating modern, responsive interfaces using HTML, CSS, JavaScript, and React."},
         {number:"3" ,Skill:"Backend Development" ,AboutSkill:"Building secure backend systems with CRUD functionality using PHP, MySQL."},
-        {number:"4" ,Skill:"UI Design" ,AboutSkill:"Designing clean digital interfaces that communicate effectively."}
+        
 
 
     ];
@@ -49,6 +79,7 @@ function Myservices(){
 
                     
                 </div>
+                <br />
                 <div className="tools-wrapper">
                     <h1>Technical Toolkit</h1>
                     <div className="tools">
@@ -61,9 +92,12 @@ function Myservices(){
                         ))}
                     </div>
                 </div>
+
+                <br />
             
                 
             </div>
+                <Projects/>
         </section>
     )
     

@@ -26,6 +26,7 @@ function Contact(){
         <section className="Contactsection" id="contact">
             <h1>Get In Touch</h1>
             <div className="contact-wrapper">
+            <small>Lets talk</small>
                 <h1>Have a project in mind ? Let's build something beautiful together.</h1>
                 
                 <div className="contact-container">

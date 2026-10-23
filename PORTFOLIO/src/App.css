@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background: #1a2e38;
+  background: #081b22;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,7 +17,31 @@ p {
 html {
   scroll-behavior: smooth;
 }
+.notfound {
+    min-height: 100vh;
+    background: #061014;
+    color: #00f7ff;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.error-code {
+    color: #00f7ff;
+    letter-spacing: 5px;
+    font-family: monospace;
+}
+
+.error-message {
+    color: #a5c8ce;
+    font-family: monospace;
+}
 header {
   position: fixed;
   z-index: 1000;
@@ -46,11 +70,12 @@ nav {
 
 nav a {
   color: aqua;
+  font-weight: 550;
   text-decoration: none;
 }
 
-nav a:hover {
-  text-decoration: underline;
+header nav a:hover {
+  color: #3b82f6;
 }
 .logo-container{
   display: flex;
@@ -389,34 +414,7 @@ nav a:hover {
   transition: 0.3s ease-in;
 }
 
-#workbtn::before,
-#workbtn::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 40px;
-  border: 2px solid aqua;
 
-  animation: signal1 2s infinite;
-  z-index: -1;
-  pointer-events: none;
-}
-
-#workbtn::after {
-  animation-delay: 1s;
-}
-
-@keyframes signal1 {
-  0% {
-    transform: scale(1);
-    opacity: 0.8;
-  }
-
-  100% {
-    transform: scale(1.2, 1.4);
-    opacity: 0;
-  }
-}
 .message {
   padding: 10px;
   border-radius: 5px;
@@ -769,6 +767,9 @@ nav a:hover {
   flex-wrap: wrap;
 
   gap: 22px;
+
+  width: 100% !important;
+
 }
 
 .service-card {
@@ -776,7 +777,7 @@ nav a:hover {
 
   border: 1px solid rgba(0, 255, 255, 0.13);
 
-  width: 23rem;
+  width: 25rem !important;
 
   height: 14rem;
 
@@ -828,7 +829,6 @@ nav a:hover {
 .projectCard {
   padding: 12px;
   display: flex;
-  flex-grow: 1;
   flex-direction: column;
   gap: 12px;
   border-radius: 3px;
@@ -1758,8 +1758,8 @@ form,
 }
 
 .service-card {
-  flex: 1 1 280px;
-  width: auto;
+  flex: 1 1 400px;
+  width: 100%;
   min-width: 0;
   max-width: 100%;
   height: auto;

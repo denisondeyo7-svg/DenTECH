@@ -16,6 +16,7 @@ import Adminmessages from './Messages.jsx'
 import ChangeUser from './ChangeUsername.jsx'
 import ChangePass from './Password.jsx'
 import Add from './Addprojects.jsx'
+import NotFound from "./NotFound";
 
 
 
@@ -41,6 +42,7 @@ function App(){
   return(
     <BrowserRouter>
         <Routes>
+          <Route path="*" element={<NotFound />} />
           <Route path="/" element={<><Header/><Home/></>}/>
           <Route path="/Projects" element={
               <><Header/><Projects/></>}/>
