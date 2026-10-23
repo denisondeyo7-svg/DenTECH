@@ -13,7 +13,7 @@ function Content(){
     const [username, setUsername] = useState("");
 
     useEffect(() => {
-        fetch("http:// 192.168.18.6/dentech-backend/check-session.php", {
+        fetch("http://localhost/dentech-backend/check-session.php", {
             credentials: "include"
         })
         .then(response => {
