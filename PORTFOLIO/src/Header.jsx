@@ -1,15 +1,23 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import './App.css';
-import image from './assets/logo.png'
+import image from './assets/1792583620687.png'
 function Header(){
 
     const [menuOpen, setMenuOpen] = useState(false);
     return(
         <header>
             
-            <div className="logo">
-                <img src={image} alt="logo" />
+            <div className="logo-container">
+                <div className="logo">
+                    <img src={image} alt="logo" />
+
+                </div>
+                <div className="my-brand">
+                    <h2>Denis <br />
+                        <span className="brandsmall">Ondeyo</span></h2>
+                    
+                </div>
             </div>
             
 
@@ -25,10 +33,17 @@ function Header(){
             </div>
 
             
-            <div className="menubtn"onClick={() => setMenuOpen(!menuOpen)}>
-                <i className={menuOpen ? "fas fa-times" : "fas fa-bars"}></i>
-            </div>
 
+            
+            <div className="headerbtns">
+                <div className="menubtn"onClick={() => setMenuOpen(!menuOpen)}>
+                    <i className={menuOpen ? "fas fa-times" : "fas fa-bars"}></i>
+                </div>
+
+                <div className="employ">
+                    <Link to="/contact" id="employme">Employ me</Link>
+                </div>
+            </div>
             {menuOpen && (
                 <div className="sidebar">
                     <button onClick={() => setMenuOpen(false)}>
@@ -44,7 +59,10 @@ function Header(){
                         <Link to="/Admin"onClick={()=> setMenuOpen(false)}>Admin Page</Link>
 
                     </nav>
-
+                    <br/>
+                     <div className="employ">
+                        <Link to="/contact" id="employme">Employ me</Link>
+                    </div>
                     
                 </div>
             )}

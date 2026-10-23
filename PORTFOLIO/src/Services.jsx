@@ -33,7 +33,7 @@ function Myservices(){
 
             <div className="services-wrapper">
                 
-                <h2>What I Do</h2>
+                <h2>What <span className='servicee'>I DO</span></h2>
 <br />
                 <div className="serviceimage">
                     <img src={Serviceimage} alt="" />

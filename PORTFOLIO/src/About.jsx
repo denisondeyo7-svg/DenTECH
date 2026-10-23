@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 function About(){
 
     const content = [
-        {number:"1",mytitle:"Hear from me", contentTitle:"Who’s Denis ?", contentTheme:"The Developer Behind the Code" , mycontent:"I’m Denis Ondeyo, an aspiring software developer and IT professional with a passion for technology, creativity, and problem-solving. I’m currently pursuing a BSc in Information Technology at Kibabii University, while building practical experience through personal projects and continuous learning. I enjoy turning ideas into functional digital solutions through web development, programming. My goal is to keep growing as a developer, create technology that solves real-world problems, and build a career around innovation and meaningful digital solutions."},
+        {number:"1",mytitle:"Hear from me", contentTitle:"Who’s Denis ?", contentTheme:"The Developer Behind the Code" , mycontent:"I’m Denis Ondeyo, an aspiring fullstack developer with a passion for technology, creativity, and problem-solving. I’m currently pursuing a BSc in Information Technology at Kibabii University, while building practical experience through personal projects and continuous learning. I enjoy turning ideas into functional digital solutions through web development, programming. My goal is to keep growing as a developer, create technology that solves real-world problems, and build a career around innovation and meaningful digital solutions.",tag:"Innovating Your Digital Experience"},
         ];
     
 
@@ -29,8 +29,9 @@ function About(){
                                 <h1>{content.contentTitle}</h1>
                                 <h1>{content.contentTheme}</h1>
                                 <p>{content.mycontent}</p>
-                                <br />
-                                <Link to="/Projects"id='aboutbtn'>View My Projects <i className='fas fa-globe'></i></Link>
+                                <h1>{content.tag}</h1>
+                                <br /><br />
+                                <Link to="/Projects"id='employme'>Explore My Projects <i className='fas fa-globe'></i></Link>
                             </div>
                         ))}
 
