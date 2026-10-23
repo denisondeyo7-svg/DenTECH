@@ -12,7 +12,7 @@ function Login(){
 
         const form = event.target;
 
-        fetch("http://localhost/dentech-backend/login.php", {
+        fetch("https://dentech.kesug.com/dentech-backend/login.php", {
             method: "POST",
             body: new FormData(form),
             credentials: "include"

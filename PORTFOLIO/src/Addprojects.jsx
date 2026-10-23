@@ -14,7 +14,7 @@ function Add(){
 
         const form = event.target;
 
-        fetch("http://localhost/dentech-backend/addproject.php",{
+        fetch("https://dentech.kesug.com/dentech-backend/addproject.php",{
             method:"POST",
             body: new FormData(form),
             credentials:"include",

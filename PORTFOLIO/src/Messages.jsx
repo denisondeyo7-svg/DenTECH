@@ -8,7 +8,7 @@ function Adminmessages(){
 
     useEffect(()=>{
 
-        fetch("http://localhost/dentech-backend/messages.php",{
+        fetch("https://dentech.kesug.com/dentech-backend/messages.php",{
             method:"GET",
             credentials:"include",
         })

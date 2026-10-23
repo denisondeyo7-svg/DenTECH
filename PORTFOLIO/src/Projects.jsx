@@ -7,7 +7,7 @@ function Projects() {
 
   useEffect(()=>{
 
-    fetch("http://localhost/dentech-backend/projects.php",{
+    fetch("https://dentech.kesug.com/dentech-backend/projects.php",{
       method:"GET",
       credentials:"include",
     })
@@ -41,7 +41,7 @@ function Projects() {
           {projects.map((project)=>(
             <div className="projectCard"key={project.id}>
               <div className="image">
-                <img src={`http://localhost/dentech-backend/uploads/${project.image}`} alt={project.image} />
+                <img src={`https://dentech.kesug.com/dentech-backend/uploads/${project.image}`} alt={project.image} />
               </div>
               <div className="name">
                 <h2>{project.name}</h2>

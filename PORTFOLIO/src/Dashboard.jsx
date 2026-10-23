@@ -13,7 +13,7 @@ function Content(){
     const [username, setUsername] = useState("");
 
     useEffect(() => {
-        fetch("http://localhost/dentech-backend/check-session.php", {
+        fetch("https://dentech.kesug.com/dentech-backend/check-session.php", {
             credentials: "include"
         })
         .then(response => {
@@ -33,7 +33,7 @@ function Content(){
 
     
     function handleLogout() {
-        fetch("http://localhost/dentech-backend/logout.php", {
+        fetch("https://dentech.kesug.com/dentech-backend/logout.php", {
             method: "POST",
             credentials: "include"
         })
