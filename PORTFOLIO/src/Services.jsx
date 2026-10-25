@@ -10,7 +10,7 @@ function Myservices(){
 
   useEffect(()=>{
 
-    fetch("https://dentech.kesug.com/dentech-backend/projects.php",{
+    fetch("http://localhost/dentech-backend/projects.php",{
       method:"GET",
       credentials:"include",
     })

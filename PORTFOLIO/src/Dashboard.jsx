@@ -1,11 +1,10 @@
-import { Link } from 'react-router-dom'
 import { useEffect, useState } from "react";
 
 
 function Content(){
     const boxes = [
         {number:"1" , No:"7+" ,name:"Projects",i:"fas fa-computer"},
-        {number:"2" , No:"2" ,name:"LiveProjects",i:"fas fa-globe"},
+        {number:"2" , No:"2" ,name:"LiveProjects",i:"fas fa-globe-asia"},
         {number:"3" , No:"3" ,name:"Under Dev",i:"fas fa-gear"},
         {number:"4" , No:"8+" ,name:"Repos",i:"fab fa-github"}
     ]
@@ -13,7 +12,7 @@ function Content(){
     const [username, setUsername] = useState("");
 
     useEffect(() => {
-        fetch("https://dentech.kesug.com/dentech-backend/check-session.php", {
+        fetch("http://localhost/dentech-backend/check-session.php", {
             credentials: "include"
         })
         .then(response => {
@@ -33,7 +32,7 @@ function Content(){
 
     
     function handleLogout() {
-        fetch("https://dentech.kesug.com/dentech-backend/logout.php", {
+        fetch("http://localhost/dentech-backend/logout.php", {
             method: "POST",
             credentials: "include"
         })
@@ -53,7 +52,7 @@ function Content(){
             
             <div className="admintop">
                 
-                <h2 className="welcome-message">Welcome back ,{username}</h2>
+                <h2 className="welcome-message">Welcome back {username}</h2>
 
                 <a href=""onClick={handleLogout}>
                     <p>Logout  <i className='fas fa-power-off'></i></p>

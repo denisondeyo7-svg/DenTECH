@@ -1,11 +1,12 @@
 body {
   margin: 0;
-  background: #081b22;
+  background: #1a2e38;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   height: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
  
 }
 
@@ -96,6 +97,7 @@ header nav a:hover {
 .brandsmall{
   font-size: 12px;
   color: aqua;
+  letter-spacing: 2px;
 }
 .logo {
   margin-left: 12px;
@@ -104,7 +106,7 @@ header nav a:hover {
   justify-content: center;
   width: 4rem;
   height:4rem;
-  background: #000000;
+  background: #070f13;
   border-radius: 10px;
   border: 2px solid aqua;
   overflow: hidden;

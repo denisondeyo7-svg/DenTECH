@@ -10,7 +10,7 @@ function Contact(){
 
         const form = event.target;
 
-        fetch("https://dentech.kesug.com/dentech-backend/contact.php",{
+        fetch("http://localhost/dentech-backend/contact.php",{
 
             method: "POST",
             body: new FormData(form)
