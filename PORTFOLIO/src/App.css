@@ -822,27 +822,36 @@ header nav a:hover {
   display: flex;
   gap: 22px;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
   height: auto;
   width: 90%;
 }
 
 .projectCard {
+  position: relative;
   padding: 12px;
   display: flex;
   flex-direction: column;
   gap: 12px;
   border-radius: 3px;
-  width: 400px;
-  box-shadow: inset 0 0 10px aqua;
-  height: 600px;
+  width: 500px;
+  box-shadow:inset 0 0 4px rgba(1, 255, 255, 0.308);
+  height: auto;
+
 }
 .name {
-  text-align: center;
+ position: relative;
+  
+}
+.dev-tools{
+  padding: 10px;
+  color: #cac8c8;
+}
+.name h2{
+  color: #fff;
 }
 .image {
-  height: 25rem;
+  height: 300px;
   width: 100%;
   border: 1px solid rgba(0, 255, 255, 0.356);
   overflow: hidden;
@@ -851,12 +860,13 @@ header nav a:hover {
 .image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+
   transition: 0.3s ease;
 }
 
 .image img:hover {
   scale: 1.02;
+ 
 }
 .projectCard .btn {
   display: flex;
@@ -952,13 +962,18 @@ header nav a:hover {
 
   padding: 10px;
 
-  background: #308cf731;
+  background: #000;
+
+  border: 1px solid rgba(0, 255, 255, 0.5);
 
   border-radius: 10px;
 
   width: 100%;
 }
 
+.contactdetails ul li:hover{
+  background: #00f7ff2d;
+}
 .contactdetails ul li a {
   color: #c5c4c4;
 }

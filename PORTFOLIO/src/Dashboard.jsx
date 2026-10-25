@@ -1,15 +1,13 @@
 import { useEffect, useState } from "react";
-
+import Live from "./components/Live";
+import DevProjects from "./components/DevProjects";
+import TotalProjects from "./components/Myprojects";
+import TotalMessages from "./components/AllMessages";
 
 function Content(){
-    const boxes = [
-        {number:"1" , No:"7+" ,name:"Projects",i:"fas fa-computer"},
-        {number:"2" , No:"2" ,name:"LiveProjects",i:"fas fa-globe-asia"},
-        {number:"3" , No:"3" ,name:"Under Dev",i:"fas fa-gear"},
-        {number:"4" , No:"8+" ,name:"Repos",i:"fab fa-github"}
-    ]
-
+    
     const [username, setUsername] = useState("");
+    
 
     useEffect(() => {
         fetch("http://localhost/dentech-backend/check-session.php", {
@@ -31,6 +29,9 @@ function Content(){
     }, []);
 
     
+    
+    {/*logout function*/}
+
     function handleLogout() {
         fetch("http://localhost/dentech-backend/logout.php", {
             method: "POST",
@@ -62,15 +63,15 @@ function Content(){
             <div className="content-container">
                 
                 <div className="boxes">
-                    {boxes.map((box)=>(
-                        <div className="adminbox"key={box.number}>
-                            <p>{box.No}</p>
-                            <div className="number">
-                                <h2>{box.name}</h2>
-                                <i className={box.i}></i>
-                            </div>
-                        </div>
-                    ))}
+                    
+                        <TotalProjects/>
+
+                        <Live/>
+
+                        <DevProjects/>
+
+                        <TotalMessages/>
+                   
                 </div>
 <br /><br />
                 <div className="admin-projects-container">

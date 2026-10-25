@@ -79,6 +79,15 @@ function Add(){
                 required
                 />
             </div>
+            <div className="input">
+                <label htmlFor="tools">Development tools      <i className="fas fa-hammer"></i></label>
+                <input
+                type="text"
+                name="tools"
+                id="tools"
+                required
+                />
+            </div>
 
             <div className="input">
                 <label htmlFor="image">Project image      <i className="fas fa-layer-group"></i></label>

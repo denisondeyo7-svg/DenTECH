@@ -1,5 +1,6 @@
 import { useEffect ,useState } from "react";
 
+
 function Projects() {
 
     const[ projects,setProject] = useState([]);
@@ -49,10 +50,13 @@ function Projects() {
               <div className="description">
                 <p>{project.description}</p>
               </div>
+
+              <small className="dev-tools">{project.tools}</small>
+             
               <div className="btn">
                 
                 <a href={project.url} target="_blank"rel="noopener noreferrer">
-                  <button className="view">View Live Site</button>
+                  <button className="view"> Live Site</button>
                 </a>
 
                 <p>{project.status}</p>

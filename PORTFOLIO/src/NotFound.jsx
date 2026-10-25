@@ -8,7 +8,7 @@ function NotFound() {
             <h1>PAGE NOT FOUND<span>_</span></h1>
 
             <Link to="/" className="error-message">
-                Go back home <i className='fas fa-arrow-left'></i>
+                Back home <i className='fas fa-arrow-left'></i>
             </Link>
 
         </div>

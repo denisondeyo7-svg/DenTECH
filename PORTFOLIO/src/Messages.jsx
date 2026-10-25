@@ -1,10 +1,13 @@
 import { useEffect ,useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 
 function Adminmessages(){
 
+    const navigate=useNavigate();
     const [messages,setMessage] = useState([]);
     const [status, setStatus] = useState("");
+  
 
     useEffect(()=>{
 
@@ -29,6 +32,24 @@ function Adminmessages(){
 
     },[]);
 
+
+    function deleteMessage(){
+        fetch(`http://localhost/dentech-backend/delete-message.php?id=${id}`,{
+            method:"DELETE",
+            credentials:"include",
+        })
+        .then(response=>response.json())
+        .then(results=>{
+            if(results.success){
+                navigate("/messages");
+            }else{
+                setMessage(results.message);
+            }
+        })
+         .catch(error=>{
+            console.log("error",error);
+        });
+    }
 
     
     
