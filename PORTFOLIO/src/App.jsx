@@ -28,7 +28,7 @@ function Home() {
       <LandingPageContent/>
       <br />
       <About/>
-      <br /><br /><br /><br />
+      <br />
       <Myservices/>
       <br /><br />
       <Contact/>
@@ -57,6 +57,11 @@ function App(){
               <>
                 <Dashboard/>
                 <Content/>
+                <AdminProjects/>
+                <Adminmessages/>
+                <ChangePass/>
+                <ChangeUser/>
+                <Add/>
               </>
             </Protected>
             }/>

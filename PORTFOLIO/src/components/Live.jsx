@@ -3,7 +3,7 @@ import { useEffect,useState } from "react";
 function Live(){
     const[ Live,setLive] = useState("");
     useEffect(()=>{
-        fetch("http://localhost/dentech-backend/Live.php",{
+        fetch("/dentech-backend/Live.php",{
             method:"GET",
             credentials:"include",
         })

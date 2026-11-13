@@ -55,10 +55,8 @@ header {
   border-bottom-right-radius: 10px;
   justify-content: space-between;
   padding: 10px;
-  box-shadow:  0 0 15px rgba(0, 255, 255, 0.616);
-  background: linear-gradient(140deg,rgba(0, 255, 255, 0.356),#16171d);
+  background: #1a2e38;
   z-index: 1200;
-  border-bottom: 1px solid #333;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
@@ -79,9 +77,13 @@ header nav a:hover {
   color: #3b82f6;
 }
 .logo-container{
+  text-decoration: none;
   display: flex;
   align-items: center;
   gap: 12px;
+}
+#togglehome{
+  text-decoration: none;
 }
 
 .my-brand{
@@ -89,7 +91,8 @@ header nav a:hover {
   align-items: center;
 }
 
-.my-brand h2{
+.my-brand p{
+  font-style: italic;
   color: #22d3ee;
 
 }
@@ -104,9 +107,9 @@ header nav a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 4rem;
-  height:4rem;
-  background: #070f13;
+  width: 3rem;
+  height:3rem;
+  background: #0f2530;
   border-radius: 10px;
   border: 2px solid aqua;
   overflow: hidden;
@@ -150,18 +153,15 @@ header nav a:hover {
   margin-left: auto;
   background: transparent;
   color: aqua;
-  border: 1px solid #ffffff2c;
-  border-radius: 10px;
-  font-size: 25px;
+  border: 1px solid aqua;
+  border-radius: 5px;
+  font-size: 18px;
   cursor: pointer;
   height: 2rem;
   width: 2rem;
 }
 
-.sidebar button:hover {
-  border: 1px solid aqua;
-  border-radius: 5px;
-}
+
 
 .sidebar nav {
   display: flex;
@@ -296,7 +296,7 @@ header nav a:hover {
 .load {
   position: fixed;
 
-  z-index: 1000;
+  z-index: 2000;
 
   top: 0;
 
@@ -341,15 +341,7 @@ header nav a:hover {
   width: 100%;
 }
 
-.herosContent h1 {
-  text-align: center;
 
-  color: transparent;
-
-  -webkit-text-stroke: 1px aqua;
-
-  line-height: 118%;
-}
 
 .herosContent p {
   text-align: center;
@@ -397,8 +389,6 @@ header nav a:hover {
 
 #workbtn {
   position: relative;
-  isolation: isolate;
-
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -406,9 +396,8 @@ header nav a:hover {
 
   padding: 18px;
   width: 14rem;
-  height: 4rem !important;
-  border-radius: 40px;
-
+  height: 3.3rem;
+  border-radius: 10px;
   background: linear-gradient(90deg, #22d3ee 0%, #3b82f6 100%);
   font-size: 20px;
   color: #000;
@@ -441,9 +430,9 @@ header nav a:hover {
 
   width: 14rem;
 
-  height: 4rem !important;
+  height: 3.3rem !important;
 
-  border-radius: 40px;
+  border-radius: 10px;
 
   font-size: 20px;
 
@@ -465,30 +454,102 @@ header nav a:hover {
   background: transparent;
 
   color: #fff;
+
+  border: 1px solid aqua;
 }
+
+
+
+.myavatar{
+  position: relative;
+  border-radius: 50%;
+  height: 12rem;
+  width: 12rem;
+  background: transparent;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+
+.myavatar::before{
+  content: ""; 
+  position: absolute;
+  height: 20rem;
+  width: 20rem;
+  background: conic-gradient(transparent, #00f7ff, transparent,aqua);
+  filter: blur(10px);
+  z-index: 1;
+  animation: spin 4s linear infinite;
+}
+.myavatar::after{
+  content: "";
+  position: absolute;
+  inset: 4px; 
+  background: #111; 
+  border-radius: 50%;
+  z-index: 2;
+
+}
+
+
+
+@keyframes spin {
+  from{transform: rotate(0deg);}
+  to{transform: rotate(360deg);}
+}
+
+.myavatar img{
+  position: relative;
+  height: 97%; 
+  width: 97%;
+  border-radius: 50%;
+  object-fit: cover;
+  z-index: 3; 
+  transition: .3s ease;
+}
+.myavatar img:hover{
+  scale: 1.32;
+  
+}
+
+
 
 .socials-links {
   display: flex;
-
-  gap: 25px;
+  gap: 12px;
 }
 
+.socials-links a{
+  text-decoration: none;
+}
 .socials-links i {
-  padding: 3px;
+  display: flex;
 
-  font-size: 22px;
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 4px;
+
+  font-size: 18px;
 
   color: #000;
 
-  background:linear-gradient( 130deg,aqua ,rgba(0, 255, 255, 0.651));
+  background:linear-gradient( 130deg,rgba(0, 255, 255, 0.726) ,rgba(0, 255, 255, 0.562));
 
   border-radius: 5px;
 
-  box-shadow: 1px 0 5px aqua;
+ 
 }
 
 .socials-links i:hover {
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.432);
+  background: transparent;
+  border: 1px solid aqua;
+  color: aqua;
 }
 
 .tools-wrapper {
@@ -548,7 +609,7 @@ header nav a:hover {
 
   z-index: 1000;
 
-  right: 19px;
+  right: 22px;
 
   bottom: 3rem;
 
@@ -556,7 +617,7 @@ header nav a:hover {
 
   border-radius: 20%;
 
-  padding: 12px;
+  padding: 10px;
 
   height: 4rem;
 
@@ -574,9 +635,7 @@ header nav a:hover {
   z-index: -1;
 }
 
-.whatsapp::after {
-  animation-delay: 2s;
-}
+
 
 @keyframes signal {
   0% {
@@ -615,15 +674,15 @@ header nav a:hover {
 
   width: 100%;
 
-  margin: 15px;
 }
 
 .about-wrapper {
   width: 100%;
 
   display: flex;
+  
   flex-wrap: wrap;
-  gap: 42px;
+  gap: 45px;
   height: 100%;
   justify-content: center;
 }
@@ -666,6 +725,11 @@ header nav a:hover {
 
 .about-card {
   padding: 10px;
+}
+
+.about-card h3{
+  color: #fff;
+  line-height: 100%;
 }
 .about-card h1 {
   line-height: 100%;
@@ -732,7 +796,7 @@ header nav a:hover {
 
   width: 100%;
 
-  background: #0d0d0e;
+  background: #0f2530;
 }
 
 .services-wrapper {
@@ -798,6 +862,25 @@ header nav a:hover {
 
 .service-card h1 {
   line-height: 110%;
+}
+
+.service-card h3 i{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  background: #bbb8b870;
+}
+
+
+.icons{
+  margin: 12px;
+  color: #000;
+  font-size: 25px;
 }
 .Projects {
   height: auto;
@@ -912,27 +995,43 @@ header nav a:hover {
 .contact-wrapper {
   display: flex;
 
-  flex-direction: column;
-
-  margin: 15px;
-
+  align-items: center;
+  
   gap: 22px;
 }
+
+
 
 .contact-wrapper h1 {
   line-height: 100%;
 }
 
-.contact-container {
+
+.contact-cards{
   display: flex;
 
-  gap: 22px;
+  flex-wrap: wrap;
+  
+  width: 100%;
 
   align-items: center;
 
-  width: 100%;
+  justify-content: space-between;
 
-  flex-wrap: wrap;
+  
+}
+.contact-container {
+  display: flex;
+
+  align-self: first baseline;
+
+  gap: 15px;
+
+  flex-direction: column;
+
+  width: 400px;
+
+
 }
 
 .contact-container p {
@@ -977,16 +1076,18 @@ header nav a:hover {
 .contactdetails ul li a {
   color: #c5c4c4;
 }
-form {
-  max-width: 90%;
-  width: 100%;
+.form {
+
+  width: 500px;
+
+}
+form{
   display: flex;
 
   flex-direction: column;
 
   gap: 12px;
 }
-
 form h1 {
   text-align: center;
 }
@@ -1259,6 +1360,14 @@ footer i {
   flex-grow: 1;
 }
 
+.me{
+  padding: 10px;
+  color: aqua;
+  font-size: 16px;
+
+}
+
+
 .adminbox:nth-child(1) {
   background: #2b2c30;
 }
@@ -1430,9 +1539,7 @@ legend {
     flex-direction: column;
   }
 
-  .me {
-    font-size: 45px;
-  }
+  
 
   .links nav {
     display: none;
@@ -1524,9 +1631,7 @@ legend {
   .sidebar {
     display: block;
   }
-  .me {
-    font-size: 45px;
-  }
+  
 
   .links nav {
     display: none;
@@ -1652,14 +1757,18 @@ li {
 
 
 .landingpage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   min-height: 92vh;
   height: auto;
-  padding: 8rem 16px 3rem;
+  padding: 5rem 14px 2rem;
 }
 
 .heros {
   width: 100%;
-  max-width: 900px;
+  max-width: 96%;
   margin-inline: auto;
   padding-inline: 8px;
 }
@@ -1668,17 +1777,16 @@ li {
   max-width: 100%;
 }
 
-.herosContent h1 {
-  font-size: clamp(2rem, 5vw, 4.5rem);
-}
+
 
 .den {
   font-family: serif;
-  
+  text-decoration: underline;
+  font-style: italic;
   color: #0bffeb;
   }
 .herosContent p {
-  max-width: 720px;
+  max-width: 95%;
 }
 
 .c2a {
@@ -1688,15 +1796,7 @@ li {
   gap: 16px;
 }
 
-#workbtn,
-#reachbtn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: min(14rem, 100%);
-  height: 3rem;
-  max-width: 100%;
-}
+
 
 .tools-wrapper,
 .tools,
@@ -1706,12 +1806,11 @@ li {
 .whycontainer,
 .Contactsection,
 .contact-wrapper,
-.contact-container,
 .contactdetails,
-form,
 .mainfooter {
   min-width: 0;
   max-width: 100%;
+  width: 100%;
 }
 
 .tools {
@@ -1724,14 +1823,13 @@ form,
   padding: 32px 0;
 }
 
-.about-wrapper {
-  gap: 28px;
-  margin: 12px;
-}
 
+.about-wrapper {
+  justify-content: space-between;
+}
 .aboutimage {
   flex: 0 1 27rem;
-  width: min(100%, 29rem);
+  width: min(100%, 35rem);
   height: auto;
   aspect-ratio: 1 / 1;
 }
@@ -1796,14 +1894,7 @@ form,
   margin: 0 auto;
 }
 
-.contact-container {
-  align-items: flex-start;
-}
 
-.contact-container > * {
-  flex: 1 1 280px;
-  min-width: 0;
-}
 
 .contact-container p {
   width: auto;
@@ -1964,13 +2055,11 @@ footer {
   #workbtn,
   #reachbtn {
     width: 100%;
-    height: 2.9rem;
-
     font-size: 1rem;
   }
 
   .about {
-    max-width: calc(100% - 24px);
+    max-width: calc(100% - 25px);
     width: 100%;
     margin: 24px 0;
     padding: 28px 0;
@@ -2046,9 +2135,7 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
-  .me {
-    font-size: clamp(1.8rem, 9vw, 2.8rem);
-  }
+  
 
   .c2a {
     flex-direction: column;
@@ -2066,10 +2153,7 @@ footer {
   .projectCard {
     width: 100%;
   }
-  .herosContent h1 {
-    font-size: clamp(1.8rem, 8.5vw, 2.7rem);
-    -webkit-text-stroke-width: 0.8px;
-  }
+  
 
   .herosContent p {
     font-size: 0.95rem;
@@ -2147,7 +2231,7 @@ footer {
 
 @media screen and (max-width: 360px) {
   
-
+  
   .whatsapp {
     position: fixed;
     height: 4rem;

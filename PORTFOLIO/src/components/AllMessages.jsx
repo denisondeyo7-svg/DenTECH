@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 function TotalMessages(){
     const [total, settotal] = useState("");
     useEffect(()=>{
-        fetch("http://localhost/dentech-backend/All-messages.php",{
+        fetch("/dentech-backend/All-messages.php",{
             method:"GET",
             credentials:"include",
         })

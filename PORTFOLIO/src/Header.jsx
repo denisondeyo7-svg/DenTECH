@@ -8,22 +8,24 @@ function Header(){
     return(
         <header>
             
-            <div className="logo-container">
-                <div className="logo">
-                    <img src={image} alt="logo" />
+            <a href="/" id="togglehome">
+                <div className="logo-container">
+                    <div className="logo">
+                        <img src={image} alt="logo" />
 
+                    </div>
+                    <div className="my-brand">
+                        <p>Denis <br />
+                            <span className="brandsmall">Ondeyo</span></p>
+                        
+                    </div>
                 </div>
-                <div className="my-brand">
-                    <h2>Denis <br />
-                        <span className="brandsmall">Ondeyo</span></h2>
-                    
-                </div>
-            </div>
+            </a>
             
 
             <div className="links">
                 <nav>
-                    <a href="/#home"><i className='fa-regular fa-home'></i>         Home</a>
+                    <a href="/#home"><i className='fas fa-layer-group'></i>         Home</a>
                     <a href="/#about">About</a>
                     <a href="/#services">Services</a>
                     <Link to="/Projects">Projects</Link>
@@ -31,6 +33,13 @@ function Header(){
                     <Link to="/Admin">Admin</Link>
                 </nav>
             </div>
+
+            <div className="socials-links">
+                    <a href="https://github.com/denisondeyo7-svg" target="_blank" rel="noopener noreferrer"><i className='fab fa-github'></i></a>
+                    <a href="https://www.linkedin.com/in/denis-ondeyo-8885813b6/" target="_blank"rel="noopener noreferrer"><i className='fab fa-linkedin'></i></a>
+                    <a href="https://wa.me/254726534460" target="_blank" rel="noopener noreferrer"><i className='fab fa-whatsapp'></i></a>
+                    <a href="tel:+254726534460" target="_blank" rel="noopener noreferrer"><i className='fas fa-phone'></i></a>
+                </div>
 
             
 
@@ -44,10 +53,12 @@ function Header(){
                     <Link to="/contact" id="employme">Employ me</Link>
                 </div>
             </div>
+
+            {/*menu navigation*/}
             {menuOpen && (
                 <div className="sidebar">
                     <button onClick={() => setMenuOpen(false)}>
-                        ×
+                        <i className="fas fa-times"></i>
                     </button>
 
                     <nav>

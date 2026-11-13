@@ -5,7 +5,7 @@ function TotalProjects(){
     const [total, settotal] = useState("");
 
     useEffect(()=>{
-        fetch("http://localhost/dentech-backend/Total_projects.php",{
+        fetch("/dentech-backend/Total_projects.php",{
             method:"GET",
             credentials:"include",
         })

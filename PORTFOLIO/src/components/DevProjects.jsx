@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 function DevProjects(){
     const [total, settotal] = useState("");
     useEffect(()=>{
-        fetch("http://localhost/dentech-backend/Under_dev.php",{
+        fetch("/dentech-backend/Under_dev.php",{
             method:"GET",
             credentials:"include",
         })

@@ -10,7 +10,7 @@ function Content(){
     
 
     useEffect(() => {
-        fetch("http://localhost/dentech-backend/check-session.php", {
+        fetch("/dentech-backend/check-session.php", {
             credentials: "include"
         })
         .then(response => {
@@ -33,7 +33,7 @@ function Content(){
     {/*logout function*/}
 
     function handleLogout() {
-        fetch("http://localhost/dentech-backend/logout.php", {
+        fetch("/dentech-backend/logout.php", {
             method: "POST",
             credentials: "include"
         })

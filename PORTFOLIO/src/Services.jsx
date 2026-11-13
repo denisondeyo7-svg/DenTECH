@@ -1,4 +1,4 @@
-import Serviceimage from './assets/file_00000000997881f4ac036c0ebe8f3bc5.png'
+
 import { useEffect ,useState } from "react";
 import Projects from "./Projects.jsx"
 
@@ -30,48 +30,41 @@ function Myservices(){
     });
 
   },[]);
-    const SectionTitle=[
-        {number:"1", Title:"Services"}
-    ];
+    
 
     const services = [
-        {number:"1" ,Skill:"Web Development" ,AboutSkill:"Building responsive, modern, and functional websites tailored to different needs."},
-        {number:"2" ,Skill:"Frontend Development" ,AboutSkill:"Creating modern, responsive interfaces using HTML, CSS, JavaScript, and React."},
-        {number:"3" ,Skill:"Backend Development" ,AboutSkill:"Building secure backend systems with CRUD functionality using PHP, MySQL."},
+        {number:"1" ,i:"fas fa-code",Skill:"Web Development" ,AboutSkill:"Building responsive, modern, and functional websites tailored to different needs."},
+        {number:"2" ,i:"fas fa-computer" ,Skill:"Frontend Development" ,AboutSkill:"Creating modern, responsive interfaces using HTML, CSS, JavaScript, and React."},
+        {number:"3" ,i:"fas fa-database", Skill:"Backend Development" ,AboutSkill:"Building secure backend systems with CRUD functionality using PHP, MySQL."},
         
 
 
     ];
 
     const Tools = [
-        {number:"1", toolname:"HTML"},
-        {number:"2", toolname:" CSS"},
-        {number:"3", toolname:"Javascript"},
-        {number:"4", toolname:"React"},
-        {number:"5", toolname:"PHP"},
-        {number:"6", toolname:"mySQL"}
+        {number:"1", logo:"fab fa-html5",toolname:"HTML"},
+        {number:"2", logo:"fab fa-css",toolname:" CSS"},
+        {number:"3", logo:"fab fa-js",toolname:"Javascript"},
+        {number:"4", logo:"fab fa-react",toolname:"React"},
+        {number:"5", logo:"fab fa-php",toolname:"PHP"},
+        {number:"6", logo:"fas fa-database",toolname:"SQL db"}
     ]
 
     return(
         <section className="Services"id='services'>
             <br />
-            {SectionTitle.map((SectionTitle)=>(
-                <div key={SectionTitle.number}>
-                    <h1>{SectionTitle.Title}</h1>
-                </div>
-            ))}
+           <h1>My <span className='den'>Services</span></h1>
 
             <div className="services-wrapper">
                 
-                <h2>What <span className='servicee'>I DO</span></h2>
+                <h2>What <span className='den'>I dO</span></h2>
 <br />
-                <div className="serviceimage">
-                    <img src={Serviceimage} alt="" />
-                </div>
-                <br />
+                
+               
                 <div className="service-card-container">
                     {services.map((service)=>(
                         <div className="service-card"key={service.number}>
+                            <h3><i className={service.i}></i></h3>
                             <h1>{service.Skill}</h1>
                             <p>{service.AboutSkill}</p>
                         </div>
@@ -88,6 +81,7 @@ function Myservices(){
 
                             <div className="tool"key={Tool.number}>
                                 <p>{Tool.toolname}</p>
+                                <p className="icons"><i className={Tool.logo}></i></p>
                             </div>
                         ))}
                     </div>

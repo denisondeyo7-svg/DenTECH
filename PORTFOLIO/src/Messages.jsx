@@ -1,72 +1,72 @@
-import { useEffect ,useState } from "react"
+import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 
 
-function Adminmessages(){
+function Adminmessages() {
 
-    const navigate=useNavigate();
-    const [messages,setMessage] = useState([]);
+    const navigate = useNavigate();
+    const [messages, setMessage] = useState([]);
     const [status, setStatus] = useState("");
-  
 
-    useEffect(()=>{
 
-        fetch("http://localhost/dentech-backend/messages.php",{
-            method:"GET",
-            credentials:"include",
+    useEffect(() => {
+
+        fetch("/dentech-backend/messages.php", {
+            method: "GET",
+            credentials: "include",
         })
-        .then(response =>response.json())
-        .then(result=>{
-            if(result.success){
-                setMessage(result.data);
-                
-            }
-             else {
-                setMessage([]);
-                setStatus(result.message);
-            }
-        })
-        .catch(error=>{
-            console.log("error",error);
-        });
+            .then(response => response.json())
+            .then(result => {
+                if (result.success) {
+                    setMessage(result.data);
 
-    },[]);
+                }
+                else {
+                    setMessage([]);
+                    setStatus(result.message);
+                }
+            })
+            .catch(error => {
+                console.log("error", error);
+            });
+
+    }, []);
 
 
-    function deleteMessage(){
-        fetch(`http://localhost/dentech-backend/delete-message.php?id=${id}`,{
-            method:"DELETE",
-            credentials:"include",
+    function deleteMessage() {
+        fetch(`/dentech-backend/delete-message.php?id=${id}`, {
+            method: "DELETE",
+            credentials: "include",
         })
-        .then(response=>response.json())
-        .then(results=>{
-            if(results.success){
-                navigate("/messages");
-            }else{
-                setMessage(results.message);
-            }
-        })
-         .catch(error=>{
-            console.log("error",error);
-        });
+            .then(response => response.json())
+            .then(results => {
+                if (results.success) {
+                    navigate("/messages");
+                } else {
+                    setMessage(results.message);
+                }
+            })
+            .catch(error => {
+                console.log("error", error);
+            });
     }
 
-    
-    
 
-    return(
+
+
+    return (
         <div className="messages">
             <h1>Messages</h1>
 
-                {status && <p className="message">{status}</p>}
+            {status && <p className="message">{status}</p>}
             <div className="message-container">
-                
-                {messages.map((message)=>(
-                    <div className="messagecard"key={message.id}>
+
+                {messages.map((message) => (
+                    <div className="messagecard" key={message.id}>
                         <div className="content">
-                            <p>{message.firstname }<br /> {message.number}</p>
+                            <p>{message.firstname}<br /> {message.number}</p>
                             <small>{message.message}</small>
-                        
+
                         </div>
 
                         <button onClick={() => deleteMessage(message.id)}>
