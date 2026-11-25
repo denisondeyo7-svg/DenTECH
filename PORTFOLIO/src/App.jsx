@@ -32,6 +32,7 @@ function Home() {
       <Myservices/>
       <br /><br />
       <Contact/>
+      <Footer/>
       
       
     </>
@@ -69,6 +70,7 @@ function App(){
               <>
                 <Dashboard/>
                 <AdminProjects/>
+                <Footer/>
               </>
           }/>
 
@@ -76,6 +78,7 @@ function App(){
               <>
                 <Dashboard/>
                 <Adminmessages/>
+                <Footer/>
               </>
           }/>
 
@@ -83,6 +86,7 @@ function App(){
               <>
                 <Dashboard/>
                 <ChangePass/>
+                <Footer/>
               </>
           }/>
 
@@ -90,6 +94,7 @@ function App(){
               <>
                 <Dashboard/>
                 <ChangeUser/>
+                <Footer/>
               </>
           }/>
 
@@ -101,7 +106,7 @@ function App(){
           }/>
 
         </Routes>
-      <Footer/>
+      
     </BrowserRouter>
   )
 }

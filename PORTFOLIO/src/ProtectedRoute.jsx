@@ -8,7 +8,8 @@ function Protected({ children }) {
     const [authenticated, setAuthenticated] = useState(null);
 
     useEffect(() => {
-        fetch("http://localhost/dentech-backend/check-session.php", {
+       
+        fetch("/dentech-backend/check-session.php", {
             credentials: "include"
         })
         .then(response => {

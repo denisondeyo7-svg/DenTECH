@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import logo from './assets/denova.png'
 
 function Login(){
     const navigate = useNavigate();
     
-    const [message, setMessage] = useState("");
+    const [messages, setMessage] = useState("");
 
 
     function handleSubmit(event) {
@@ -15,7 +16,7 @@ function Login(){
         fetch("/dentech-backend/login.php", {
             method: "POST",
             body: new FormData(form),
-            credentials: "include"
+            credentials: "include",
         })
 
         .then(response => response.json())
@@ -29,7 +30,7 @@ function Login(){
         })
         
         .catch(error => {
-            console.log("Error:", error);
+            console.log("LoginError:", error)
             setMessage("Something went wrong. Please try again.");
         });
     }
@@ -38,10 +39,13 @@ function Login(){
 
         <div className="adminform">
             <form onSubmit={handleSubmit}>
+                <div className="form-logo">
+                    <img src={logo} alt="Form image logo" />
+                </div>
 
                 <h1>Admin Login</h1>
                 
-                {message &&<p className="message">{message}</p>}             
+                {messages &&<p className="message">{messages}</p>}             
             <div className="input">
                 <label htmlFor="username">Username      <i className="fa-regular fa-user"></i></label>
                 <input

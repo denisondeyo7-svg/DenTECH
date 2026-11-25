@@ -26,7 +26,7 @@ function Add(){
         .then(data =>{
            
             if(!data.success){
-                setMessage(data.message);
+                setMessage(data.alert);
             }
             else{
                 navigate("/myprojects");
